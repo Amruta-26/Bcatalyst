@@ -16,7 +16,7 @@ app.get("/test/:name", function (req, res) {
 
 app.post("/test", function (req, res) {
     console.log(req.body);
-    const username = req.body.username;
+    const username = req.body.name;
     res.send("Post Route Hit by : " + username);
 });
 
