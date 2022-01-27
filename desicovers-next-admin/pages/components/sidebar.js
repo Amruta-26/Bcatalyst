@@ -33,11 +33,11 @@ export default function Sidebar() {
   return (
     <Drawer
       sx={{
-        width: drawerWidth,
+        width: '18%',
         height: "100%",
         flexShrink: 0,
         "& .MuiDrawer-paper": {
-          width: drawerWidth,
+          width: '18%',
           boxSizing: "border-box",
           bgcolor: indigo[400],
           color: "#fff",
