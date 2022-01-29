@@ -15,9 +15,10 @@ export default function Home() {
             >
                 <div class="form-group">
                     <ul class="messages">
-                        <div class="alert alert-error" style="color: red">
-                            {{ message }}
-                        </div>
+                        <div
+                            class="alert alert-error"
+                            style={{ color: "red" }}
+                        ></div>
                     </ul>
                 </div>
                 <div class="form-group">
@@ -27,9 +28,9 @@ export default function Home() {
                     >
                         File:
                     </label>
-                    <div class="col-md-8" style="padding-bottom: 20px">
+                    <div class="col-md-8" style={{ paddingBottom: "20px" }}>
                         <input
-                            style="height: 45px"
+                            style={{ height: "45px" }}
                             type="file"
                             name="csv_file"
                             id="csv_file"
@@ -41,12 +42,12 @@ export default function Home() {
                 <div class="form-group">
                     <div
                         class="col-md-3 col-sm-3 col-xs-12 col-md-offset-3"
-                        style="margin-bottom: 10px"
+                        style={{ marginBottom: "10px" }}
                     >
                         <button class="btn btn-primary">
                             <span
                                 class="glyphicon glyphicon-upload"
-                                style="margin-right: 5px"
+                                style={{ marginRight: "5px" }}
                             ></span>
                             Upload
                         </button>
@@ -55,7 +56,7 @@ export default function Home() {
             </form>
 
             <a
-                style="margin-left: 12px"
+                style={{ marginLeft: "12px" }}
                 href="/export_product_csv"
                 class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
             >
