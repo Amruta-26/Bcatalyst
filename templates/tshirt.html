@@ -1,6 +1,4 @@
-{% extends "basewhite.html" %}
-{% block content %}
-{% load static %}
+
 
         <main class="main">
         	
@@ -25,11 +23,11 @@
                                                 <form method="get">
                                                     <div class="row">
                                                         <div class="form-group col-sm-4 col-md-3">
-                                                            {{ myFilter.form.company }}
+                                            
                                                           
                                                         </div>
                                                         <div class="product-details-quantity">
-                                                              {{ myFilter.form.price }}
+                                                    
                                                               <p>Value: <span id="demo"></span></p>
                                                         </div>
                                                       </div>
@@ -104,9 +102,9 @@
                                                <!--  <div class="product-cat">
                                                     <a href="#">Women</a>
                                                 </div> --><!-- End .product-cat -->
-                                                <h3 class="product-title"><a href="/product/{{product.id}}">{{product.title}}</a></h3><!-- End .product-title -->
+                                                <h3 class="product-title"><a href="/product/{{product.id}}"></a></h3><!-- End .product-title -->
                                                 <div class="product-price">
-                                                    &#x20b9 {{product.price}}
+                                        
                                                 </div><!-- End .product-price -->
                                                 <!-- <div class="ratings-container">
                                                     <div class="ratings">
@@ -140,5 +138,4 @@ output.innerHTML = slider.value;
 slider.oninput = function() {
   output.innerHTML = this.value;
 }
-</script>
-  {% endblock content %}    
+</script> 
