@@ -25,8 +25,6 @@ import Link from "next/link";
 const drawerWidth = 300;
 
 export default function Sidebar() {
-    const [open, setOpen] = React.useState(true);
-
     const productItems = [
         { name: "Add Product", link: "/demo" },
         { name: "Show Product", link: "/demo" },
@@ -68,9 +66,6 @@ export default function Sidebar() {
         mobileItems,
         mobileCoversItems,
     ];
-    const handleClick = () => {
-        setOpen(!open);
-    };
 
     return (
         <Drawer
@@ -110,27 +105,21 @@ export default function Sidebar() {
                 </ListItemButton>
                 <Divider sx={{ bgcolor: "#adadad" }} />
                 <div className="fadeword">INTERFACE</div>
-                <List>
-                    <ListItemButton onClick={handleClick}>
-                        <ListItemIcon>
-                            <SettingsIcon sx={{ color: "#fff" }} />
-                        </ListItemIcon>
-                        <ListItemText primary="Product" />
-                        {open ? <ExpandLess /> : <ExpandMore />}
-                    </ListItemButton>
-                </List>
             </List>
             <Divider sx={{ bgcolor: "#adadad" }} />
             {dashboardContent.map((items, index) => (
                 <div key={index}>
-                    <CollapsibleCustomComponent item={items} />
+                    <CollapsibleCustomComponent
+                        item={items}
+                        title="some text"
+                    />
                 </div>
             ))}
         </Drawer>
     );
 }
 
-const CollapsibleCustomComponent = ({ item }) => {
+const CollapsibleCustomComponent = ({ item, title }) => {
     const [open, setOpen] = React.useState(false);
 
     return (
