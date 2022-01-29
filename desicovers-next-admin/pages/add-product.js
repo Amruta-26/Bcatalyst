@@ -5,7 +5,6 @@ export default function Home() {
     return (
         <>
             <Sidebar />
-
             <h1>Add PRodcut</h1>
         </>
     );
