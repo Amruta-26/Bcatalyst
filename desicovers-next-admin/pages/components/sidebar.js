@@ -26,7 +26,7 @@ const drawerWidth = 300;
 
 export default function Sidebar() {
     const productItems = [
-        { name: "Add Product", link: "/demo" },
+        { name: "Add Product", link: "/add-product" },
         { name: "Show Product", link: "/demo" },
         { name: "Add Pincode", link: "/demo" },
         { name: "Tshirt Size", link: "/demo" },
@@ -136,9 +136,11 @@ const CollapsibleCustomComponent = ({ item, title }) => {
                     <div className="drop-fade">BASIC SERVICES:</div>
                     <List component="div" disablePadding>
                         {item.map((text, index) => (
-                            <ListItem sx={{ pl: 4 }} button key={text.name}>
-                                <ListItemText primary={text.name} />
-                            </ListItem>
+                            <Link href={text.link}>
+                                <ListItem sx={{ pl: 4 }} button key={text.name}>
+                                    <ListItemText primary={text.name} />
+                                </ListItem>
+                            </Link>
                         ))}
                     </List>
                 </Collapse>
