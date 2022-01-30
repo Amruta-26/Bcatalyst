@@ -1,10 +1,9 @@
-{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
 <title>OTP VERIFICATION</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" type="image/png" href="{% static 'img/ad.png' %}"/>
+<link rel="shortcut icon" type="image/png" href="img/ad.png"/>
 
 </head>
 <style type="text/css">
@@ -97,15 +96,10 @@ body {
 <body>
 <center>
 	<div class="container">
-    {% if messages %}
       <ul class="messages">
-        {% for message in messages %}
-          <div class="alert alert-success"style='color: green'>{{ message }}</div>
-        {% endfor %}
+          <div class="alert alert-success"style='color: green'></div>
       </ul>
-    {% endif %}
 		<form id="frm-mobile-verification" name="reg" method='POST' action="/verifyadminotp/">
-		{% csrf_token %}  
    			<div class="form-heading">OTP is sent to Your Mobile Number</div>
 	   		  <div class="form-row">
 				<div id="divOuter">

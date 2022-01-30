@@ -1,13 +1,8 @@
-{% extends "index.html" %}
-{% block content %}
-{% load static %}
-
 <div class="container">
     <div class="card card-body">
     <h4>Filter Orders:</h4>
 
       <form method="get">
-            {{ myFilter.form.as_p }}
         <button class="btn btn-primary" type="submit">Search</button>
       </form>
     </div>
@@ -34,22 +29,22 @@
    </thead>
 
     <tbody>  
-        {% for order in place %}  
+       
           <tr> 
             <!-- <td>{{ order.id}}</td>   -->
-            <td>{{ order.order_id}}</td>
-            <th>{{ order.awb}}</th>
-            <td>{{ order.first_name }}&nbsp;{{ order.last_name }}</td>  
-            <td>{{ order.phone }}</td>
-            <td><img src="{{ order.products.image.url}}"height="100",width="100" /> </td>
-            <td>{{ order.address1 }} &nbsp;{{ order.pincode }}&nbsp;{{ order.city }}&nbsp;{{ order.state }}</td>
-            <td>{{ order.email }}</td>
-            <td>{{ order.totalamount }}</td>
+            <td></td>
+            <th></th>
+            <td>&nbsp;</td>  
+            <td></td>
+            <td><img src=""height="100",width="100" /> </td>
+            <td>&nbsp;&nbsp;&nbsp;</td>
+            <td></td>
+            <td></td>
         </tr>                        
-        {% endfor %} 
+        
     </tbody>                   
 </table> 
 </div>
-{% endblock content %}
+
 
 http://demo.desicover.com/accounts/google/login/callback/

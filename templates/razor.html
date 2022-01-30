@@ -10,24 +10,23 @@
 <h1> PLEASE DO NOT REFRESH THE PAGE.............</h1>
 <body>
     <form action="/razorpay" method="POST">
-        {% csrf_token %} 
 
         <script
             src="https://checkout.razorpay.com/v1/checkout.js"
             data-key="rzp_live_NEyfqys7rO0Qdr"
-            data-amount={{tol_price}}
+            data-amount=""
             data-name="Desicovers"
             data-description="Purchase Description"
             data-image="vk.jpg"
             data-netbanking="true"
             data-description="Tron Legacy"
-            data-prefill.name={{first_name}}
-            data-prefill.email= {{email}}
-            data-prefill.contact={{phone}}
-            data-notes.shopping_order_id={{order_id}}>
+            data-prefill.name=""
+            data-prefill.email= ""
+            data-prefill.contact=""
+            data-notes.shopping_order_id="">
         </script>
-        <input type="hidden" name="shopping_order_id" value={{order_id}}>
-        <input type="hidden" name="amount" value={{tol_price}}>
+        <input type="hidden" name="shopping_order_id" value="">
+        <input type="hidden" name="amount" value="">
     </form>
 </body>
 </html>

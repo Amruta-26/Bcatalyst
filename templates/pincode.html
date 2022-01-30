@@ -1,19 +1,15 @@
-{% extends "index.html" %}
-{% block content %}
-{% load static %}
 <h1><center>Add Pincode</center></h1>
 
   <form action="/pincode/" method="POST" enctype="multipart/form-data" class="form-horizontal"> 
-    {% csrf_token %}  
+   
 
       <div class='form-group'>
-        {% if messages %}
+      
           <ul class="messages">
-            {% for message in messages %}
-              <div class="alert alert-error"style='color: red'>{{ message }}</div>
-            {% endfor %}
-          </ul>
-        {% endif %}
+    
+              <div class="alert alert-error"style='color: red'></div>
+            </ul>
+   
       </div>
 
       <div class="form-group">
@@ -38,16 +34,13 @@
     </tr>
   </thead>
   <tbody>
-    {% for p in pincode %}
+   
 
       <tr>
-        <td>{{ p.pincode }}</td>
-        <td><a href="/destroypincode/{{ p.id }}" class='btn btn-danger'>Delete</a></td>
+        <td></td>
+        <td><a href="/destroypincode/" class='btn btn-danger'>Delete</a></td>
       </tr>
 
-    {% endfor %}
   </tbody>
 </table>
 
-
-{%endblock content%}
