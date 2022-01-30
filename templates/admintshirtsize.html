@@ -1,9 +1,4 @@
-{% extends "index.html" %}
-{% block content %}
-{% load static %}
-
-
- <table class="table table-striped table-bordered table-sm">  
+<table class="table table-striped table-bordered table-sm">  
     <thead class="thead-dark">  
         <tr>               
             <th>ID</th>
@@ -17,17 +12,16 @@
     </thead>  
 
     <tbody>  
-        {% for i in size %}  
-            <tr> 
-                <td>{{i.id}}</td>
-                <td>{{i.sku}}</td>
-                <td>{{i.category}}</td>
+         <tr> 
+                <td></td>
+                <td></td>
+                <td></td>
                 
                <td>
                     <form action="/adminsize/" method="POST" enctype="multipart/form-data" class="form-horizontal"> 
-                    {% csrf_token %}  
+           
                      <div class="form-group">
-                            <input type="hidden" name="Id" value="{{i.id}}" readonly/>
+                            <input type="hidden" name="Id" value="" readonly/>
                         <div class="col-md-8">
                             <input type="checkbox" id="small" value="Small" name="small"> Small <label for="small">
                             <input type="checkbox" id="medium"value="Medium"name="medium"> Medium <label for="medium">
@@ -44,12 +38,6 @@
                  
                 </form>
             </td>
-            <td>{{i.tshirt.small}} {{i.tshirt.Medium}} {{i.tshirt.large}} {{i.tshirt.xl}} {{i.tshirt.xxl}} </td>
-            
-
-            
-               
-            </tr>                         
-        {% endfor %}  
-
-{% endblock content %}
+            <td></td>
+         </tr>                         
+        
