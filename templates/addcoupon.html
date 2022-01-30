@@ -1,13 +1,8 @@
-{% extends "index.html" %}
-{% block content %}
-{% load static %}
 
 	<h1>
 		<center>Coupon Registration</center>
 	</h1>
 	<form method='POST' action="/coupon/">
-		{% csrf_token %}
-
 		<table align='center'>
 
 
@@ -71,5 +66,4 @@ document.querySelector("#today").value = today;
 document.querySelector("#today2").valueAsDate = new Date();
 
 
-</script>
-{%endblock content%}
+</script>}

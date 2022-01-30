@@ -1,6 +1,3 @@
-{% extends "basewhite.html" %}
-{% block content %}
-{% load static %}
 
 <style>
 .mmenu-active .page-wrapper {
@@ -248,8 +245,8 @@ ul li.sub_cat:hover a{
     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#one" aria-expanded="false" aria-controls="one" >
 
       <span class="gray-logo">
-                 <img src="{% static 'assets/images/inuse/Appleblack.png' %}" alt="apple-logo_3"></span> <span class="over-logo">
-                 <img src="{% static 'assets/images/inuse/Applewhite.png' %}" alt="apple-hover-logo_2"></span>
+                 <img src="" alt="apple-logo_3"></span> <span class="over-logo">
+                 <img src="" alt="apple-hover-logo_2"></span>
       <h5>Apple</h5>
       <div class="up_arrow_icon"></div>
     </a>
@@ -258,14 +255,11 @@ ul li.sub_cat:hover a{
 <div id="one" class="panel-collapse collapse sub_cat_main" role="tabpanel" aria-labelledby="headingOne" style="height: 0px;display: none">
 <ul>
 
-  {% for product in product %}
-      {% if product.company == 'APPLE' or product.company == 'Apple' or product.company == 'apple' %}
          <li class="sub_cat">
-            <a href="/mobilecover/{{product.mobilename}}">{{product.mobilename}}</a>
+            <a href="/mobilecover/"></a>
           </li>
           <!-- lower|slugify  |slugify|urlencode-->
-      {% endif %}
-  {% endfor %}
+
 
 
 </ul>
@@ -278,9 +272,9 @@ ul li.sub_cat:hover a{
 <div class="sub_cat_main_container" role="tab" id="headingTwo" style="height: 107px;">
     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#two" aria-expanded="false" aria-controls="two" >
         <span class="gray-logo">
-             <img src="{% static 'assets/images/inuse/oneplusblack.png' %}"></span>
+             <img src=""></span>
              <span class="over-logo">
-             <img src="{% static 'assets/images/inuse/onepluswhite.png' %}"></span>
+             <img src=""></span>
 <h5>OnePlus</h5>
 
 <div class="up_arrow_icon"></div>
@@ -288,12 +282,8 @@ ul li.sub_cat:hover a{
     <div id="two" class="panel-collapse collapse sub_cat_main" role="tabpanel" aria-labelledby="headingTwo" style="height: 0px;display: none;">
         <ul>
 
-            {% for prod in product %}
-                {% if prod.company == 'oneplus' or prod.company == 'OnePlus' or prod.company == 'Oneplus'  or prod.company == 'ONEPLUS' %}
 		<li class="sub_cat">
-                  <a href="/mobilecover/{{prod.mobilename}}" >{{prod.mobilename}}</a></li>
-                {% endif %}
-            {% endfor %}
+                  <a href="/mobilecover/" ></a></li>
            <!--  <a href="#" title="iPhone 11 Pro Max">iPhone 11 Pro Max</a> -->
 
 
@@ -305,19 +295,17 @@ ul li.sub_cat:hover a{
 <div class="sub_cat_main_container" role="tab" id="headingThree" style="height: 107px;">
 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#three" aria-expanded="false" aria-controls="three">
     <span class="gray-logo">
-        <img src="{% static 'assets/images/inuse/MiC.png' %}"></span>
+        <img src=""></span>
         <span class="over-logo">
-             <img src="{% static 'assets/images/inuse/MiO.png' %}"></span>
+             <img src=""></span>
 <h5>Xiaomi</h5>
 <div class="up_arrow_icon"></div>
 </a>
 <div id="three" class="panel-collapse collapse sub_cat_main" role="tabpanel" aria-labelledby="headingThree" style="height: 0px;display: none;" >
 
  <ul>
-    {% for product in product %}
-      {% if product.company == 'XIAOMI' or product.company == 'Xiaomi' or product.company == 'xiaomi' %}
         <li class="sub_cat">
-          <a href="/mobilecover/{{product.mobilename}}" >{{product.mobilename}}</a></li>
+          <a href="/mobilecover/" ></a></li>
         </li>
       {% endif %}
     {% endfor %}
@@ -328,20 +316,17 @@ ul li.sub_cat:hover a{
 
 <div class="sub_cat_main_container" role="tab" id="headingFour"style="height: 107px;">
 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#four" aria-expanded="false" aria-controls="four"><span class="gray-logo">
-    <img src="{% static 'assets/images/inuse/SamsungC.png' %}"></span> <span class="over-logo">
-     <img src="{% static 'assets/images/inuse/SamsungO.png' %}"></span>
+    <img src=""></span> <span class="over-logo">
+     <img src=""></span>
 <h5>Samsung</h5>
 <div class="up_arrow_icon"></div>
 </a>
 <div id="four" class="panel-collapse collapse sub_cat_main" role="tabpanel" aria-labelledby="headingFour" style="height: 0px;display: none;">
  <ul>
-    {% for product in product %}
-      {% if product.company == 'SAMSUNG' or product.company == 'samsung' or product.company == 'Samsung' %}
         <li class="sub_cat">
-           <a href="/mobilecover/{{product.mobilename}}" >{{product.mobilename}}</a></li>
+           <a href="/mobilecover/" ></a></li>
         </li>
-      {% endif %}
-    {% endfor %}
+  
   </ul>
 </div>
 </div>
@@ -349,20 +334,16 @@ ul li.sub_cat:hover a{
 
 <div class="sub_cat_main_container" role="tab" id="headingFive"style="height: 107px;">
 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#five" aria-expanded="false" aria-controls="five"><span class="gray-logo">
-    <img src="{% static 'assets/images/inuse/OppoC.png' %}"></span> <span class="over-logo">
-     <img src="{% static 'assets/images/inuse/OppoO.png' %}"></span>
+    <img src=""></span> <span class="over-logo">
+     <img src=""></span>
 <h5>Oppo</h5>
 <div class="up_arrow_icon"></div>
 </a>
 <div id="five" class="panel-collapse collapse sub_cat_main" role="tabpanel" aria-labelledby="headingFive" style="height: 0px;display: none;">
  <ul>
-    {% for product in product %}
-      {% if product.company == 'OPPO' or product.company == 'Oppo' or product.company == 'oppo' %}
         <li class="sub_cat">
-           <a href="/mobilecover/{{product.mobilename}}" >{{product.mobilename}}</a></li>
+           <a href="/mobilecover/" ></a></li>
         </li>
-      {% endif %}
-    {% endfor %}
   </ul>
 </div>
 </div>
@@ -371,120 +352,100 @@ ul li.sub_cat:hover a{
 <div class="sub_cat_main_container" role="tab" id="headingSix"style="height: 137px;">
 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#six" aria-expanded="false" aria-controls="six">
     <span class="gray-logo">
-     <img src="{% static 'assets/images/inuse/VivoC.png' %}">
+     <img src="">
     </span>
     <span class="over-logo">
-     <img src="{% static 'assets/images/inuse/VivoO.png' %}">
+     <img src="">
     </span>
 <h5>Vivo</h5>
 <div class="up_arrow_icon"></div>
 </a>
 <div id="six" class="panel-collapse collapse sub_cat_main" role="tabpanel" aria-labelledby="headingSix" style="height: 0px;display: none;">
  <ul>
-    {% for product in product %}
-      {% if product.company == 'VIVO' or product.company == 'Vivo' or product.company == 'vivo' %}
         <li class="sub_cat">
-           <a href="/mobilecover/{{product.mobilename}}" >{{product.mobilename}}</a></li>
+           <a href="/mobilecover/" ></a></li>
         </li>
-      {% endif %}
-    {% endfor %}
+  
   </ul>
 </div>
 </div>
 
 <div class="sub_cat_main_container" role="tab" id="headingSeven"style="height: 137px;">
 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#seven" aria-expanded="false" aria-controls="seven"><span class="gray-logo">
-     <img src="{% static 'assets/images/inuse/realmeC.png' %}"></span> <span class="over-logo">
-      <img src="{% static 'assets/images/inuse/realmeO.png' %}"></span>
+     <img src=""></span> <span class="over-logo">
+      <img src=""></span>
 <h5>Realme</h5>
 <div class="up_arrow_icon"></div>
 </a>
 <div id="seven" class="panel-collapse collapse sub_cat_main" role="tabpanel" aria-labelledby="headingSeven" style="height: 0px;display: none;">
  <ul>
-    {% for product in product %}
-      {% if product.company == 'REALME' or product.company == 'realme' or product.company == 'Realme' or product.company == 'RealMe' %}
         <li class="sub_cat">
-           <a href="/mobilecover/{{product.mobilename}}" >{{product.mobilename}}</a></li>
+           <a href="/mobilecover/" ></a></li>
         </li>
-      {% endif %}
-    {% endfor %}
   </ul>
 </div>
 </div>
 <div class="sub_cat_main_container" role="tab" id="headingEight"style="height: 137px;">
 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#eight" aria-expanded="false" aria-controls="eight"><span class="gray-logo">
- <img src="{% static 'assets/images/inuse/PocoC.png' %}">
+ <img src="">
 </span> <span class="over-logo">
-  <img src="{% static 'assets/images/inuse/pocoO.png' %}"></span>
+  <img src=""></span>
 <h5>Poco</h5>
 <div class="up_arrow_icon"></div>
 </a>
 <div id="eight" class="panel-collapse collapse sub_cat_main" role="tabpanel" aria-labelledby="headingEight" style="height: 0px;display: none;">
  <ul>
-    {% for product in product %}
-      {% if product.company == 'POCO' or product.company == 'poco'  or product.company == 'Poco' %}
         <li class="sub_cat">
-         <a href="/mobilecover/{{product.mobilename}}" >{{product.mobilename}}</a></li>
+         <a href="/mobilecover/" ></a></li>
         </li>
-      {% endif %}
-    {% endfor %}
   </ul>
 </div>
 </div>
 
 <div class="sub_cat_main_container" role="tab" id="headingNine"style="height: 137px;">
 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#nine" aria-expanded="false" aria-controls="nine"><span class="gray-logo">
-  <img src="{% static 'assets/images/inuse/AsusC.png' %}"></span> <span class="over-logo">
-     <img src="{% static 'assets/images/inuse/AsusO.png' %}"></span>
+  <img src=""></span> <span class="over-logo">
+     <img src=""></span>
 <h5>Asus</h5>
 <div class="up_arrow_icon"></div>
 </a>
 <div id="nine" class="panel-collapse collapse sub_cat_main" role="tabpanel" aria-labelledby="headingNine" style="height: 0px;display: none;">
  <ul>
-    {% for product in product %}
-      {% if product.company == 'ASUS' or product.company == 'asus'  or product.company == 'Asus' %}
         <li class="sub_cat">
-           <a href="/mobilecover/{{product.mobilename}}" >{{product.mobilename}}</a></li>
+           <a href="/mobilecover/" ></a></li>
         </li>
-      {% endif %}
-    {% endfor %}
   </ul>
 </div>
 </div>
 
 <div class="sub_cat_main_container" role="tab" id="headingTen"style="height: 137px;">
 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#ten" aria-expanded="false" aria-controls="ten"><span class="gray-logo">
-     <img src="{% static 'assets/images/inuse/coolpadC.png' %}"></span> <span class="over-logo">
-     <img src="{% static 'assets/images/inuse/coolpadO.png' %}"></span>
+     <img src=""></span> <span class="over-logo">
+     <img src=""></span>
 <h5>Coolpad</h5>
 <div class="up_arrow_icon"></div>
 </a>
 <div id="ten" class="panel-collapse collapse sub_cat_main" role="tabpanel" aria-labelledby="headingTen" style="height: 0px;display: none;">
  <ul>
-    {% for product in product %}
-      {% if product.company == 'COOLPAD' or product.company == 'Coolpad' or product.company == 'coolpad' %}
         <li class="sub_cat">
-           <a href="/mobilecover/{{product.mobilename}}" >{{product.mobilename}}</a></li>
+           <a href="/mobilecover/" ></a></li>
         </li>
-      {% endif %}
-    {% endfor %}
+    
   </ul>
 </div>
 </div>
 
 <div class="sub_cat_main_container" role="tab" id="headingEleven"style="height: 137px;">
 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#eleven" aria-expanded="false" aria-controls="eleven"><span class="gray-logo">
-    <img src="{% static 'assets/images/inuse/googleC.png' %}"></span> <span class="over-logo">
-       <img src="{% static 'assets/images/inuse/GoogleO.png' %}"></span>
+    <img src=""></span> <span class="over-logo">
+       <img src=""></span>
 <h5>Google</h5>
 <div class="up_arrow_icon"></div>
 </a>
 <div id="eleven" class="panel-collapse collapse sub_cat_main" role="tabpanel" aria-labelledby="headingEleven" style="height: 0px;display: none;">
  <ul>
-    {% for product in product %}
-      {% if product.company == 'GOOGLE' or  product.company == 'Google' or product.company == 'google' %}
         <li class="sub_cat">
-           <a href="/mobilecover/{{product.mobilename}}" >{{product.mobilename}}</a></li>
+           <a href="/mobilecover/" ></a></li>
         </li>
       {% endif %}
     {% endfor %}
@@ -493,116 +454,95 @@ ul li.sub_cat:hover a{
 </div>
 <div class="sub_cat_main_container" role="tab" id="headingTwelve"style="height: 137px;">
 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#twelve" aria-expanded="false" aria-controls="twelve"><span class="gray-logo">
-   <img src="{% static 'assets/images/inuse/HTCC.png' %}"></span> <span class="over-logo">
-   <img src="{% static 'assets/images/inuse/HTCO.png' %}"></span>
+   <img src=""></span> <span class="over-logo">
+   <img src=""></span>
 <h5>HTC</h5>
 <div class="up_arrow_icon"></div>
 </a>
 <div id="twelve" class="panel-collapse collapse sub_cat_main" role="tabpanel" aria-labelledby="headingTwelve" style="height: 0px;display: none;">
  <ul>
-    {% for product in product %}
-      {% if product.company == 'HTC' or  product.company == 'Htc' or product.company == 'htc' %}
         <li class="sub_cat">
-           <a href="/mobilecover/{{product.mobilename}}" >{{product.mobilename}}</a></li>
+           <a href="/mobilecover/" ></a></li>
         </li>
-      {% endif %}
-    {% endfor %}
   </ul>
 </div>
 </div>
 
 <div class="sub_cat_main_container" role="tab" id="headingThirteen"style="height: 137px;">
 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#thirteen" aria-expanded="false" aria-controls="thirteen"><span class="gray-logo">
-    <img src="{% static 'assets/images/inuse/huaC.png' %}"></span> <span class="over-logo">
-    <img src="{% static 'assets/images/inuse/huaO.png' %}"></span>
+    <img src=""></span> <span class="over-logo">
+    <img src=""></span>
 <h5>Huawei</h5>
 <div class="up_arrow_icon"></div>
 </a>
 <div id="thirteen" class="panel-collapse collapse sub_cat_main" role="tabpanel" aria-labelledby="headingThirteen" style="height: 0px;display: none;">
  <ul>
-    {% for product in product %}
-      {% if product.company == 'HUAWEI' or product.company == 'Huawei' or product.company == 'huawei' %}
         <li class="sub_cat">
-           <a href="/mobilecover/{{product.mobilename}}" >{{product.mobilename}}</a></li>
+           <a href="/mobilecover/" ></a></li>
         </li>
-      {% endif %}
-    {% endfor %}
   </ul>
 </div>
 </div>
 <div class="sub_cat_main_container" role="tab" id="headingFourteen"style="height: 137px;">
 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#fourteen" aria-expanded="false" aria-controls="fourteen"><span class="gray-logo">
-    <img src="{% static 'assets/images/inuse/Lenovo.png' %}"></span> <span class="over-logo">
-     <img src="{% static 'assets/images/inuse/LenovoC.png' %}"></span>
+    <img src=""></span> <span class="over-logo">
+     <img src=""></span>
 <h5>Lenovo</h5>
 <div class="up_arrow_icon"></div>
 </a>
 <div id="fourteen" class="panel-collapse collapse sub_cat_main" role="tabpanel" aria-labelledby="headingFourteen" style="height: 0px;display: none;">
  <ul>
-    {% for product in product %}
-      {% if product.company == 'LENOVO' or product.company == 'Lenovo' or product.company == 'lenovo' %}
         <li class="sub_cat">
-           <a href="/mobilecover/{{product.mobilename}}" >{{product.mobilename}}</a></li>
+           <a href="/mobilecover/" ></a></li>
         </li>
-      {% endif %}
-    {% endfor %}
   </ul>
 </div>
 </div>
 <div class="sub_cat_main_container" role="tab" id="headingFifteen"style="height: 137px;">
 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#fifteen" aria-expanded="false" aria-controls="fifteen"><span class="gray-logo">
-     <img src="{% static 'assets/images/inuse/NokiaC.png' %}"></span> <span class="over-logo">
-       <img src="{% static 'assets/images/inuse/NokiaO.png' %}"></span>
+     <img src=""></span> <span class="over-logo">
+       <img src=""></span>
 <h5>Nokia</h5>
 <div class="up_arrow_icon"></div>
 </a>
 <div id="fifteen" class="panel-collapse collapse sub_cat_main" role="tabpanel" aria-labelledby="headingFifteen" style="height: 0px;display: none;">
  <ul>
-    {% for product in product %}
-      {% if product.company == 'NOKIA' or product.company == 'Nokia' or product.company == 'nokia' %}
         <li class="sub_cat">
-           <a href="/mobilecover/{{product.mobilename}}" >{{product.mobilename}}</a></li>
+           <a href="/mobilecover/" ></a></li>
         </li>
-      {% endif %}
-    {% endfor %}
   </ul>
 </div>
 </div>
 <div class="sub_cat_main_container" role="tab" id="headingSixteen"style="height: 137px;display: none;">
 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#sixteen" aria-expanded="false" aria-controls="sixteen"><span class="gray-logo">
-     <img src="{% static 'assets/images/inuse/MotoC.png' %}"></span> <span class="over-logo">
-     <img src="{% static 'assets/images/inuse/MotoO.png' %}"></span>
+     <img src=""></span> <span class="over-logo">
+     <img src=""></span>
 <h5>Motorola</h5>
 <div class="up_arrow_icon"></div>
 </a>
 <div id="sixteen" class="panel-collapse collapse sub_cat_main" role="tabpanel" aria-labelledby="headingSixteen" style="height: 0px;" >
  <ul>
-    {% for product in product %}
-      {% if product.company == 'MOTOROLA' or product.company == 'motorola' or product.company == 'Motorola' %}
         <li class="sub_cat">
-           <a href="/mobilecover/{{product.mobilename}}" >{{product.mobilename}}</a></li>
+           <a href="/mobilecover/" ></a></li>
         </li>
-      {% endif %}
-    {% endfor %}
+
   </ul>
 </div>
 </div>
 <div class="sub_cat_main_container" role="tab" id="headingSeventeen"style="height: 137px;">
 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#seventeen" aria-expanded="false" aria-controls="seventeen"><span class="gray-logo">
-     <img src="{% static 'assets/images/inuse/SonyC.png' %}"></span> <span class="over-logo">
-       <img src="{% static 'assets/images/inuse/SonyO.png' %}"></span>
+     <img src=""></span> <span class="over-logo">
+       <img src=""></span>
 <h5>Sony</h5>
 <div class="up_arrow_icon"></div>
 </a>
 <div id="seventeen" class="panel-collapse collapse sub_cat_main" role="tabpanel" aria-labelledby="headingSeventeen" style="height: 0px;display: none;">
  <ul>
-    {% for product in product %}
-      {% if product.company == 'SONY' or product.company == 'Sony' or product.company == 'sony' %}
+
         <li class="sub_cat">
-           <a href="/mobilecover/{{product.mobilename}}" >{{product.mobilename}}</a></li>
+           <a href="/mobilecover/" ></a></li>
         </li>
-      {% endif %}
-    {% endfor %}
+   
   </ul>
 </div>
 </div>
@@ -1209,9 +1149,4 @@ ul li.sub_cat:hover a{
     }
 
 </script>
-
-
-
-
-{% endblock content %}
 
