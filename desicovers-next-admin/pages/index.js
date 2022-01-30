@@ -45,7 +45,7 @@ export default function Home() {
 
       <Box
         component="main"
-        sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3, ml: 25 }}
+        sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3, ml: 20 }}
       >
 
       <div className={styles.container}>
