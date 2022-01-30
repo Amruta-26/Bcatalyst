@@ -32,7 +32,7 @@ const List = (props) => {
         <br/>
         <strong>Dashboard</strong>
         <br/>
-        <Grid container spacing={35}>
+        <Grid container spacing={10}>
           {props.items.map((item) => (
             <Grid item xs={12} sm={6} md={3} key={item.id}>
               <BasicCard
@@ -44,7 +44,7 @@ const List = (props) => {
           ))}
         </Grid>
         <br/>
-        <Grid container spacing={20}>
+        <Grid container spacing={10}>
           <Grid item xs={12} md={8}>
             <LargeCard title={"Earnings Overview"}>
            
@@ -56,7 +56,7 @@ const List = (props) => {
           </Grid>
         </Grid>
         <br/>
-        <Grid container spacing={35}>
+        <Grid container spacing={10}>
           <Grid item xs={6} md={3}>
             <LargeCard title={"Projects"} component={"BorderLinearProgress"} />
           </Grid>
