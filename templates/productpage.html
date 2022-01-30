@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-{% block content %}
-{% load static %}
 <head>
     <style>
         .checked{
@@ -22,24 +20,24 @@
     <meta name="description" content="DesiCover">
     <meta name="author" content="p-themes">
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'assets/images/icons/apple-touch-icon.png' %}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'assets/images/icons/favicon-32x32.png' %}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/images/icons/favicon-16x16.png' %}">
-    <link rel="manifest" href="{% static 'assets/images/icons/site.html' %}">
-    <link rel="mask-icon" href="{% static 'assets/images/icons/safari-pinned-tab.svg' %}" color="#666666">
-    <link rel="shortcut icon" href="{% static 'assets/images/icons/favicon.ico' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="">
+    <link rel="icon" type="image/png" sizes="32x32" href="">
+    <link rel="icon" type="image/png" sizes="16x16" href="">
+    <link rel="manifest" href="">
+    <link rel="mask-icon" href="" color="#666666">
+    <link rel="shortcut icon" href="">
     <meta name="apple-mobile-web-app-title" content="Molla">
     <meta name="application-name" content="Molla">
     <meta name="msapplication-TileColor" content="#cc9966">
-    <meta name="msapplication-config" content="{% static 'assets/images/icons/browserconfig.xml' %}">
+    <meta name="msapplication-config" content="">
     <meta name="theme-color" content="#ffffff">
     <!-- Plugins CSS File -->
-    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/plugins/owl-carousel/owl.carousel.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/plugins/magnific-popup/magnific-popup.css' %}">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="">
     <!-- Main CSS File -->
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/plugins/nouislider/nouislider.css' %}">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -58,13 +56,12 @@
                                     <li><a href="/about">About Us</a></li>
                                     <li><a href="/contact">Contact Us</a></li>
 
-                                    {% if request.user.is_authenticated %}
                                         <li><a href="/userprofile" > Welcome {{ user.get_username }}</a> </li>
                                         <li><a href="/ordersummary">Your&nbsp;Order</a></li>
                                         <li><a href="/userwallet">Wallet</a></li>
-                                    {% else %}
+                                 
                                         <li><a href="/login"><i class="icon-user"></i>Login</a></li>
-                                    {% endif %}
+                                   
 
                                 </ul>
                             </li>
@@ -82,7 +79,7 @@
                         </button>
 
                         <a href="/home" class="logo">
-                            <img src="{% static 'assets/images/logo.png' %}" alt="Molla Logo" width="105" height="25">
+                            <img src="" alt="Molla Logo" width="105" height="25">
                         </a>
 
                         <nav class="main-nav">
@@ -123,9 +120,6 @@
                                 <i class="icon-shopping-cart"></i>
                                 <span class="cart-count">{{cart|length}}</span>
                             </a>
-                        {% if request.user.is_authenticated %}
-                            {% if cart|length != 0 %}
-                               {% for i in cart %}
                                 <div class="dropdown-menu dropdown-menu-right">
                                     <div class="dropdown-cart-products">
                                        <div class="product">
@@ -158,8 +152,6 @@
                                         </div><!-- End .dropdown-cart-total -->
                                     </div><!-- End .dropdown-menu -->
                                 </div><!-- End .cart-dropdown -->
-                            {% endfor %}
-                        {% else %}
                                 <div class="dropdown-menu dropdown-menu-right">
                                     <div class="dropdown-cart-products">
                                         <div class="product-cart-details">
@@ -167,8 +159,6 @@
                                         </div>
                                     </div>
                                 </div>
-                        {% endif %}
-                    {% endif %}
                     </div><!-- End .header-right -->
                 </div><!-- End .container -->
             </div><!-- End .header-middle -->
@@ -206,19 +196,16 @@
                                                 <img src="{{product.images1.url}}" alt="product side">
                                             </a>
                                        
-                                        {% if not product.images2 != None %}
+                                 
                                             <a class="product-gallery-item" href="#" data-image="{{product.images2.url}}" data-zoom-image="{{product.images2.url}}">
                                                 <img src="{{product.images2.url}}" alt="product cross">
                                             </a>
 
-                                        {% endif %}
-
-                                          {% if not product.images3 != None %}
                                             <a class="product-gallery-item" href="#" data-image="{{product.images3.url}}" data-zoom-image="{{product.images3.url}}">
                                                 <img src="{{product.images3.url}}" alt="product with model">
                                             </a>
                                            
-                                             {% endif %}
+                                        
                                         </div><!-- End .product-image-gallery -->
                                     </div><!-- End .row -->
                                 </div><!-- End .product-gallery -->
@@ -247,27 +234,17 @@
                                    
 
                             <form method="POST" action="/add_to_cart/">
-                                 {% csrf_token %}
-                                {% if product.category == 'TSHIRT' %}
                                     <div class="product-content">
                                        <label>Shirt Size:</label>
-                                        {% if product.tshirt.small != None %}
                                           <input type="radio" id="small" value="small" name="shirt_size" required> Small <label for="small">
-                                        {% else %}
                                           <p>S</p>
-                                        {% endif %}
-
-
-                                        {% if product.tshirt.Medium != None %}
+                                        
                                           <input type="radio" id="medium" value="medium" name="shirt_size" required> Medium<label for="medium">
-                                        {% else %}
+                                       
                                             <p>M</p>
-                                        {% endif %}
-
-
-                                        {% if product.tshirt.large != None %}
+                                    
                                            <input type="radio" id="large" value="large" name="shirt_size" required> Large<label for="large">
-                                        {% else %}
+                                      
                                             <p>Large</p>
                                         {% endif %}
 
