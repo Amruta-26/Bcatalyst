@@ -14,7 +14,7 @@
       function(){
         var userRating = this.value;
         alert(userRating);
-    }); 
+    });
 });
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -62,13 +62,13 @@ h1 { font-size: 1.5em; margin: 10px; }
 
 /****** Style Star Rating Widget *****/
 
-.rating { 
+.rating {
   border: none;
   float: left;
 }
 
-.rating > input { display: none; } 
-.rating > label:before { 
+.rating > input { display: none; }
+.rating > label:before {
   margin: 5px;
   font-size: 1.25em;
   font-family: FontAwesome;
@@ -76,14 +76,14 @@ h1 { font-size: 1.5em; margin: 10px; }
   content: "\f005";
 }
 
-.rating > .half:before { 
+.rating > .half:before {
   content: "\f089";
   position: absolute;
 }
 
-.rating > label { 
-  color: #ddd; 
- float: right; 
+.rating > label {
+  color: #ddd;
+ float: right;
 }
 
 /***** CSS Magic to Highlight Stars on Hover *****/
@@ -95,7 +95,7 @@ h1 { font-size: 1.5em; margin: 10px; }
 .rating > input:checked + label:hover, /* hover current star when changing rating */
 .rating > input:checked ~ label:hover,
 .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
-.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
 
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Roboto");
@@ -246,11 +246,11 @@ h1 { font-size: 1.5em; margin: 10px; }
 
 <h1><center>Add Review</center></h1>
   <form method='POST' action="/addreview/{{product.id}}" enctype='multipart/form-data' style="margin-bottom:20px;">
-    {% csrf_token %}  
+    {% csrf_token %}
 
-    <table align='center'>  
+    <table align='center'>
             <tr>
-    
+
     </tr>
 
       <tr></tr>
@@ -296,7 +296,7 @@ h1 { font-size: 1.5em; margin: 10px; }
     <input type="radio" id="starhalf" name="rating" value="0.5" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
 </fieldset></td>
       </tr>
-        
+
       <br>
       <tr>
         <td><button class="btn btn-outline-primary-2" style="padding: .85rem 1.5rem;font-size: 1.4em;color: #c96;    background-color: transparent;    background-image: none;    border-color: #c96;box-shadow: none;  cursor: pointer;" type="submit" name="Submit"/>Submit</button></td>
@@ -306,9 +306,9 @@ h1 { font-size: 1.5em; margin: 10px; }
   </form>
 
 <script>
-    
+
     // File Upload
-// 
+//
 function ekUpload(){
   function Init() {
 
@@ -366,7 +366,7 @@ function ekUpload(){
     output(
       '<strong>' + encodeURI(file.name) + '</strong>'
     );
-    
+
     // var fileType = file.type;
     // console.log(fileType);
     var imageName = file.name;
@@ -449,4 +449,4 @@ function ekUpload(){
   }
 }
 ekUpload();
-  </script> 
+  </script>
