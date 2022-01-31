@@ -4,8 +4,7 @@ import Sidebar from "./components/sidebar";
 
 export default function Home() {
     return (
-
-
+        <>
         <main className="main">
 
             <nav aria-label="breadcrumb" className="breadcrumb-nav mb-2">
@@ -50,7 +49,7 @@ export default function Home() {
 
                             <div className="toolbox-right">
                                 <div className="toolbox-sort">
-                                    <label for="sortby">Sort by:</label>
+                                    <label htmlFor="sortby">Sort by:</label>
                                     <div className="select-custom">
                                         <select name="sortby" id="sortby" className="form-control">
                                             <option value="popularity" selected="selected">Most Popular</option>
@@ -67,7 +66,7 @@ export default function Home() {
                             <div className="row justify-content-center">
                                 <div className="col-6 col-md-4 col-lg-4">
                                     <div className="product product-7 text-center">
-                                        <figure className="product-media" style="width:100%; height:300px;">
+                                        <figure className="product-media" style={{width:"100%", height:"300px"}}>
                                             <span className="product-label label-new">New</span>
                                             <a href="">
                                                 <img src="" alt="Product image" className="product-image"/>
@@ -95,7 +94,7 @@ export default function Home() {
                 </div>
             </div >
         </main >
-        </main >
+
 
 
         <script>
@@ -107,6 +106,6 @@ export default function Home() {
                 output.innerHTML = this.value;}
         </script>
    
-
+</>
     );
 }
