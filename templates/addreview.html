@@ -1,6 +1,4 @@
-{% extends "basewhite.html" %}
-{% block content %}
-{% load static %}
+
 
   <script>
     $(document).ready(function(){
@@ -251,12 +249,11 @@ h1 { font-size: 1.5em; margin: 10px; }
     {% csrf_token %}  
 
     <table align='center'>  
-            <tr>{%if user.is_authenticated %}
+            <tr>
     
-      {% endif %}
     </tr>
 
-      <tr>{{product.product.title}}</tr>
+      <tr></tr>
       <tr><td><label>Description</label></td></tr>
       <tr><td><textarea name="review" rows="4" cols="50"></textarea></td></tr>
       <tr><td><label>Upload Image</label></tr>
@@ -453,5 +450,3 @@ function ekUpload(){
 }
 ekUpload();
   </script> 
-
-{% endblock content %}

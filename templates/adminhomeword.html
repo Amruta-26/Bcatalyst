@@ -1,11 +1,6 @@
-{% extends "index.html" %}
-{% block content %}
-{% load static %}
-
 <h1>Add HomePage Words</h1>
 
-<form action="{% url 'adminhomeword' %}" method="POST" enctype="multipart/form-data" class="form-horizontal"> 
-    {% csrf_token %}  
+<form action="" method="POST" enctype="multipart/form-data" class="form-horizontal"> 
   <div class="form-group">
       <label for="name" class="col-md-3 col-sm-3 col-xs-12 control-label">Words: </label>
       <div class="col-md-8">
@@ -43,15 +38,12 @@
     </tr>
   </thead>
   <tbody>
-    {% for photo in photos %}
       <tr>
-        <td>{{photo.info}}</td>
-        <td>{{ photo.name}}</td>
-       <td><a href="/textdestroy/{{ photo.id }}" class='btn btn-danger'>Delete</a></td>
+        <td></td>
+        <td></td>
+       <td><a href="/textdestroy/" class='btn btn-danger'>Delete</a></td>
       </tr>
-    {% endfor %}
   </tbody>
 </table>
 
-{% endblock content %}
 

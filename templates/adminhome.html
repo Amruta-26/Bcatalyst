@@ -1,6 +1,3 @@
-{% extends "index.html" %}
-{% block content %}
-{% load static %}
 
 
 <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -8,13 +5,9 @@
         <!-- Begin Page Content -->
     <div class="container-fluid">
 
-        {% if messages %}
           <ul class="messages">
-            {% for message in messages %}
-               <div class="alert alert-error"style='color: red'>{{ message }}</div>
-            {% endfor %}
+               <div class="alert alert-error"style='color: red'></div>
           </ul>
-        {% endif %}
       
       <div class="d-sm-flex align-items-center justify-content-between mb-4">
           <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
@@ -144,9 +137,6 @@
                           xAxis: {
                               categories: 
                               [ 
-                                  {% for total in result %} 
-                                      {{total.1}},
-                                   {% endfor %}
                               ]
                           },
                           yAxis: {
@@ -158,9 +148,6 @@
                           series: [{
                               name: 'Rupees',
                               data: [
-                                 {% for total in result %} 
-                                     {{total}},
-                                   {% endfor %}
                               ]
                           }, ]
                       });
@@ -287,9 +274,9 @@
                   <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
                 </div>
                 <div class="card-body">
-                  <h4 class="small font-weight-bold">User Register<span class="float-right">{{cust}}%</span></h4>
+                  <h4 class="small font-weight-bold">User Register<span class="float-right"></span></h4>
                   <div class="progress mb-4">
-                    <div class="progress-bar bg-danger" role="progressbar" style="width: {{cust}}%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: " aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                  <!--  <h4 class="small font-weight-bold">No Review<span class="float-right">40%</span></h4>
                   <div class="progress mb-4">
@@ -299,9 +286,9 @@
                   <div class="progress mb-4">
                     <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                   </div> -->
-                  <h4 class="small font-weight-bold">Payment Mode(Paytm)<span class="float-right">{{mode}}%</span></h4>
+                  <h4 class="small font-weight-bold">Payment Mode(Paytm)<span class="float-right"></span></h4>
                   <div class="progress mb-4">
-                    <div class="progress-bar bg-info" role="progressbar" style="width: {{mode}}%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-info" role="progressbar" style="width: " aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                  <!--  <h4 class="small font-weight-bold">Account Setup <span class="float-right">Complete!</span></h4>
                   <div class="progress">
@@ -316,7 +303,7 @@
                   <div class="card bg-primary text-white shadow">
                     <div class="card-body">
                       Placeorder
-                      <div class="text-white-50 small">{{place}}</div>
+                      <div class="text-white-50 small"></div>
                     </div>
                   </div>
                 </div>
@@ -324,7 +311,7 @@
                   <div class="card bg-success text-white shadow">
                     <div class="card-body">
                       Paytm
-                      <div class="text-white-50 small">{{paytm}}</div>
+                      <div class="text-white-50 small"></div>
                     </div>
                   </div>
                 </div>
@@ -332,7 +319,7 @@
                   <div class="card bg-info text-white shadow">
                     <div class="card-body">
                       Cash On delivery
-                      <div class="text-white-50 small">{{cod}}</div>
+                      <div class="text-white-50 small"></div>
                     </div>
                   </div>
                 </div>
@@ -340,7 +327,7 @@
                   <div class="card bg-warning text-white shadow">
                     <div class="card-body">
                       Contact Us 
-                      <div class="text-white-50 small">{{contact}}</div>
+                      <div class="text-white-50 small"></div>
                     </div>
                   </div>
                 </div>
@@ -348,7 +335,7 @@
                   <div class="card bg-danger text-white shadow">
                     <div class="card-body">
                       Cancelled Order
-                      <div class="text-white-50 small">{{cancel}}</div>
+                      <div class="text-white-50 small"></div>
                     </div>
                   </div>
                 </div>
@@ -356,7 +343,7 @@
                   <div class="card bg-secondary text-white shadow">
                     <div class="card-body">
                       No of Coupon
-                      <div class="text-white-50 small">{{coupon}}</div>
+                      <div class="text-white-50 small"></div>
                     </div>
                   </div>
                 </div>
@@ -400,4 +387,3 @@
 
       </div>
 
-{% endblock content %}

@@ -1,14 +1,9 @@
-{% extends "index.html" %}
-{% block content %}
-{% load static %}
-
 
  <table class="table table-striped table-bordered table-sm">  
     <tbody>  
         <tr> 
           <td>
             <form action="/bulkadminsize/" method="POST" enctype="multipart/form-data" class="form-horizontal"> 
-              {% csrf_token %}  
                 <div class="form-group">
                     <div class="col-md-8">
                         <input type="checkbox" id="small" value="Small" name="small"> Small  <label for="small">
@@ -27,4 +22,3 @@
         </tr>
     </tbody>
 </table>
-{% endblock content %}

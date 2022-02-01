@@ -1,6 +1,4 @@
-{% extends "basewhite.html" %}
-{% block content %}
-{% load static %}
+
 
 <style>
         .Container1 {
@@ -171,18 +169,18 @@
 
         <div class="Container1">
              <div class='form-group'>
-                {% if messages %}
+                
                   <ul class="messages">
-                    {% for message in messages %}
-                      <div class="alert alert-error"style='color: red; display:none;'>{{ message }}</div>
-                    {% endfor %}
+                    
+                      <div class="alert alert-error"style='color: red; display:none;'></div>
+                   
                   </ul>
-              {% endif %}
+          
             </div>
             
-        {% for order in orders %}  
-            <span id="order"> Order Id: <a href="#">{{ order.order_id}}</a></span>
-            <span id="detail">Order placed {{ order.order_date}}</span>
+      
+            <span id="order"> Order Id: <a href="#"></a></span>
+            <span id="detail">Order placed</span>
 
 
         <div class="cont1">
@@ -192,14 +190,14 @@
      <!--        <button type="button" class="btn btn-danger" id="cancelorder" href=''>Cancel Order</button> -->
             
             <div class="det">
-                <h3>{{ order.products.product_id.title }}</h3>
-                <p><span style="font-weight: bold ;">Rs: {{ order.products.price}}</span></p>
-                {% if order.paymentmode == 'cod' %}
+                <h3></h3>
+                <p><span style="font-weight: bold ;">Rs: </span></p>
+
                      <p><span style="font-weight: bold ;">Payment Mode: Cash On Delivery</span></p>
-                {% elif order.paymentmode == 'paytm' %}
+
                     <p><span style="font-weight: bold ;">Payment Mode: Paytm</span></p>
-                    <p><span style="font-weight: bold ;">Transaction Status {{order.bank.status}}</span></p>
-                {% endif %} 
+                    <p><span style="font-weight: bold ;">Transaction Status </span></p>
+
             </div>
 
             <div class="delivery">
@@ -210,7 +208,6 @@
         
 
                 <form action="/postcancel/" method="POST" class="form-control">
-                {% csrf_token %}
                   <label for="cars">Reason For Cancellation:</label>
                   <input type="hidden" value="{{order.id}}" name="id">
                   <select id="cars" name="cars">
@@ -225,8 +222,3 @@
                 </form>
         </div>
     </div>
-        {% endfor %} 
-                             
-                          
-
-{% endblock content %}

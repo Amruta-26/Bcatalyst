@@ -1,22 +1,15 @@
-{% extends "index.html" %}
-{% block content %}
-{% load static %}
 
- 
 <h1>Add Title</h1>
-<form action="{% url 'mobilename' %}" method="POST" enctype="multipart/form-data" class="form-horizontal"> 
-    {% csrf_token %}  
+<form action="" method="POST" enctype="multipart/form-data" class="form-horizontal"> 
     <div class="form-group">
         <label class="col-md-3 col-sm-3 col-xs-12 control-label">Company Name </label>
         <div class="col-md-8">
-          {{form.company}}
         </div>                    
     </div>
 
       <div class="form-group">
         <label class="col-md-3 col-sm-3 col-xs-12 control-label">Model Name </label>
         <div class="col-md-8">
-          {{form.mobilename}} 
         </div>                    
     </div>
 
@@ -39,16 +32,14 @@
     </tr>
   </thead>
   <tbody>
-    {% for photo in photos %}
-      <tr id="users-{{photo.id}}">
+      <tr id="users">
 
-        <td>{{ photo.id }}</td>
-        <td class="Company userData">{{photo.company}}</td>
-        <td  class="Model userData">{{ photo.mobilename}}</td>
+        <td>}</td>
+        <td class="Company userData"></td>
+        <td  class="Model userData"></td>
         <td><button class="btn btn-success" style="background-color:#87cefa;border-color:#87cefa;" onClick="editUser({{photo.id}})" data-toggle="modal" data-target="#myModal">Edit Review</button>
-        <a href="/mobiledestroy/{{ photo.id }}" class='btn btn-danger'>Delete</a></td>
+        <a href="/mobiledestroy/" class='btn btn-danger'>Delete</a></td>
       </tr>
-    {% endfor %}
   </tbody>
 </table>
 
@@ -60,7 +51,6 @@
             <h4 class="modal-title" id="myModalLabel" >Update Cover Name</h4>
         </div>
         <form method="POST" action="/updatemobile/">
-          {% csrf_token %}  
           <div class="modal-body">
               <input class="form-control" id="form-id" type="hidden" name="id"/>
               <label for="name">Company Name</label>
@@ -98,5 +88,4 @@ function editUser(id)
   }
 }
 </script>
-{% endblock content %}
 

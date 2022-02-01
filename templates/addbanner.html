@@ -1,19 +1,15 @@
-{% extends "index.html" %}
-{% block content %}
-{% load static %}
 
 <h1>Add Carousel</h1>
-<form action="{% url 'addcarousel' %}" method="POST" enctype="multipart/form-data" class="form-horizontal"> 
-    {% csrf_token %}  
+<form action="" method="POST" enctype="multipart/form-data" class="form-horizontal"> 
   <div class="form-group">
       <label for="name" class="col-md-3 col-sm-3 col-xs-12 control-label">File: </label>
       <div class="col-md-8">
         <input type="file" name="images">
         Enter Model Name:
           <select name="model_name">
-            {% for i in form %}
-              <option value="{{i}}">{{i}}</option>
-            {% endfor %}
+
+              <option value=""></option>
+     
           </select> 
       </div>                    
   </div>
@@ -39,18 +35,14 @@
     </tr>
   </thead>
   <tbody>
-    {% for photo in photos %}
       <tr>
       <!--  <td>{{ photo.images.name }}</td> -->
-        <td>{{ photo.id }}</td>
+        <td></td>
 
-        <td><img src="{{photo.images.url}}" alt="Product image" class="product-image" height="100px" width="100px"></td>
-        <td>{{ photo.model_name}}</td>
-       <td><a href="/destroycarousel/{{ photo.id }}" class='btn btn-danger'>Delete</a></td>
+        <td><img src="" alt="Product image" class="product-image" height="100px" width="100px"></td>
+        <td></td>
+       <td><a href="/destroycarousel/" class='btn btn-danger'>Delete</a></td>
       </tr>
-    {% endfor %}
   </tbody>
 </table>
-
-{% endblock content %}
 
