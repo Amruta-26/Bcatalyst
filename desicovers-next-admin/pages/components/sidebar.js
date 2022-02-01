@@ -111,8 +111,8 @@ export default function Sidebar() {
                 <div key={index}>
                     <CollapsibleCustomComponent
                         item={items}
-                        title="some text"
-                    />
+                        title={dashboardContent}
+                   />
                 </div>
             ))}
         </Drawer>
@@ -128,7 +128,7 @@ const CollapsibleCustomComponent = ({ item, title }) => {
                 <ListItemIcon>
                     <FolderIcon sx={{ color: "#fff" }} />
                 </ListItemIcon>
-                <ListItemText primary="Mobile Page" />
+                <ListItemText primary={title} /> 
                 {open ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
             <div className="dropdown">
