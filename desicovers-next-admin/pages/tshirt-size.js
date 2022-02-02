@@ -103,7 +103,7 @@ export default function Home() {
             output.innerHTML = slider.value;
 
             slider.oninput = function() {
-                output.innerHTML = this.value;}
+                output.innerHTML = this.value}
         </script>
    
 </>
