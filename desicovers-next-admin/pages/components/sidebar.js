@@ -27,19 +27,19 @@ const drawerWidth = 300;
 export default function Sidebar() {
     const productItems = [
         { name: "Add Product", link: "/add-product" },
-        { name: "Show Product", link: "/demo" },
-        { name: "Add Pincode", link: "/demo" },
-        { name: "Tshirt Size", link: "/demo" },
-        { name: "Bulk TshirtSize", link: "/demo" },
+        { name: "Show Product", link: "/show-product" },
+        { name: "Add Pincode", link: "/add-pincode" },
+        { name: "Tshirt Size", link: "/tshirt-size" },
+        { name: "Bulk TshirtSize", link: "/bulk-tshirt-size" },
     ];
 
     const paymentItems = [
-        { name: "Payment Recieve", link: "/demo" },
-        { name: "Place Order", link: "/demo" },
-        { name: "Cancel Order", link: "/demo" },
+        { name: "Payment Recieve", link: "/payment-recieve" },
+        { name: "Place Order", link: "/place-order" },
+        { name: "Cancel Order", link: "/cancel-order" },
         { name: "Assign Money for Cancel Order", link: "/demo" },
-        { name: "Customer Account", link: "/demo" },
-        { name: "Wallet", link: "/demo" },
+        { name: "Customer Account", link: "/customer-account" },
+        { name: "Wallet", link: "/wallet" },
     ];
 
     const mobileItems = [
@@ -111,7 +111,7 @@ export default function Sidebar() {
                 <div key={index}>
                     <CollapsibleCustomComponent
                         item={items}
-                        title={dashboardContent}
+                        title="some text"
                    />
                 </div>
             ))}

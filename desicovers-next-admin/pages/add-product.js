@@ -10,43 +10,43 @@ export default function Home() {
 
             <form
                 method="POST"
-                enctype="multipart/form-data"
-                class="form-horizontal"
+                encType="multipart/form-data"
+                className="form-horizontal"
             >
-                <div class="form-group">
-                    <ul class="messages">
+                <div className="form-group">
+                    <ul className="messages">
                         <div
-                            class="alert alert-error"
+                            className="alert alert-error"
                             style={{ color: "red" }}
                         ></div>
                     </ul>
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                     <label
-                        for="name"
-                        class="col-md-3 col-sm-3 col-xs-12 control-label"
+                        htmlFor="name"
+                        className="col-md-3 col-sm-3 col-xs-12 control-label"
                     >
                         File:
                     </label>
-                    <div class="col-md-8" style={{ paddingBottom: "20px" }}>
+                    <div className="col-md-8" style={{ paddingBottom: "20px" }}>
                         <input
                             style={{ height: "45px" }}
                             type="file"
                             name="csv_file"
                             id="csv_file"
                             required="True"
-                            class="form-control"
+                            className="form-control"
                         />
                     </div>
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                     <div
-                        class="col-md-3 col-sm-3 col-xs-12 col-md-offset-3"
+                        className="col-md-3 col-sm-3 col-xs-12 col-md-offset-3"
                         style={{ marginBottom: "10px" }}
                     >
-                        <button class="btn btn-primary">
+                        <button className="btn btn-primary">
                             <span
-                                class="glyphicon glyphicon-upload"
+                                className="glyphicon glyphicon-upload"
                                 style={{ marginRight: "5px" }}
                             ></span>
                             Upload
@@ -58,33 +58,33 @@ export default function Home() {
             <a
                 style={{ marginLeft: "12px" }}
                 href="/export_product_csv"
-                class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+                className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
             >
-                <i class="fas fa-download fa-sm text-white-50"></i> Product All
+                <i className="fas fa-download fa-sm text-white-50"></i> Product All
                 Data
             </a>
 
             <a
                 href="/export_product_csv_day"
-                class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+                className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
             >
-                <i class="fas fa-download fa-sm text-white-50"></i> Product
+                <i className="fas fa-download fa-sm text-white-50"></i> Product
                 Oneday Data
             </a>
 
             <a
                 href="/export_product_csv_week"
-                class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+                className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
             >
-                <i class="fas fa-download fa-sm text-white-50"></i> Product Week
+                <i className="fas fa-download fa-sm text-white-50"></i> Product Week
                 Data
             </a>
 
             <a
                 href="/export_product_csv_month"
-                class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+                className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
             >
-                <i class="fas fa-download fa-sm text-white-50"></i> Product
+                <i className="fas fa-download fa-sm text-white-50"></i> Product
                 Month Data
             </a>
         </>
