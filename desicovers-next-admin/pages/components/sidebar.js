@@ -37,32 +37,38 @@ export default function Sidebar() {
         { name: "Payment Recieve", link: "/payment-recieve" },
         { name: "Place Order", link: "/place-order" },
         { name: "Cancel Order", link: "/cancel-order" },
-        { name: "Assign Money for Cancel Order", link: "/demo" },
+        { name: "Assign Money for Cancel Order", link: "/assign-money-cancel" },
         { name: "Customer Account", link: "/customer-account" },
         { name: "Wallet", link: "/wallet" },
     ];
 
+    const offerItems = [
+        { name: "Add Coupon", link: "/add-coupon" },
+        { name: "Show Coupon", link: "/show-coupon" },
+    ];
+
     const mobileItems = [
-        { name: "Add Flip", link: "/demo" },
-        { name: "Show Flip", link: "/demo" },
-        { name: "Carousel", link: "/demo" },
-        { name: "Home Page Image", link: "/demo" },
-        { name: "Home Page Words", link: "/demo" },
-        { name: "Home Page Image", link: "/demo" },
-        { name: "Show Recent Arrival", link: "/demo" },
+        { name: "Add Flip", link: "/add-flip" },
+        { name: "Show Flip", link: "/show-flip" },
+        { name: "Carousel", link: "/carousel" },
+        { name: "Home Page Image", link: "/home-page-image" },
+        { name: "Home Page Words", link: "/home-page-word" },
+        { name: "Home Page Image", link: "/home-page-carousel-image" },
+        { name: "Show Recent Arrival", link: "/show-recent-arrivals" },
     ];
 
     const mobileCoversItems = [
-        { name: "Enter Mobile Cover", link: "/demo" },
-        { name: "Update Bulk Price", link: "/demo" },
-        { name: "Update Bulk description", link: "/demo" },
-        { name: "Review", link: "/demo" },
-        { name: "Admin Heading", link: "/demo" },
+        { name: "Enter Mobile Cover", link: "/enter-mobile-cover" },
+        { name: "Update Bulk Price", link: "/update-bulk-price" },
+        { name: "Update Bulk description", link: "/update-bulk-desc" },
+        { name: "Review", link: "/review" },
+        { name: "Admin Heading", link: "/admin-heading" },
     ];
 
     const dashboardContent = [
         productItems,
         paymentItems,
+        offerItems,
         mobileItems,
         mobileCoversItems,
     ];
