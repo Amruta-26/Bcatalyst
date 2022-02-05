@@ -12,6 +12,7 @@ import "../styles/css/forms.css";
 import "../styles/css/responsive.css";
 import "../styles/css/rtl.css";
 import "../styles/css/widgets.css";
+import "../styles/css/cancelorder.css"
 import Head from "next/head";
 import React from 'react';
 import styles from '../styles/Home.module.css';
