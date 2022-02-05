@@ -66,11 +66,11 @@ export default function Sidebar() {
     ];
 
     const dashboardContent = [
-        productItems,
-        paymentItems,
-        offerItems,
-        mobileItems,
-        mobileCoversItems,
+        {item:productItems, title:"Products"},
+        {item:paymentItems, title:"Customer"},
+        {item:offerItems, title:"Offer"},
+        {item:mobileItems, title:"Home Page"},
+        {item:mobileCoversItems, title:"Mobile Page"},
     ];
 
     return (
@@ -116,8 +116,8 @@ export default function Sidebar() {
             {dashboardContent.map((items, index) => (
                 <div key={index}>
                     <CollapsibleCustomComponent
-                        item={items}
-                        title="some text"
+                        item={items.item}
+                        title={items.title}
                    />
                 </div>
             ))}
@@ -142,7 +142,7 @@ const CollapsibleCustomComponent = ({ item, title }) => {
                     <div className="drop-fade">BASIC SERVICES:</div>
                     <List component="div" disablePadding>
                         {item.map((text, index) => (
-                            <Link href={text.link}>
+                            <Link href={text.link} key={index}>
                                 <ListItem sx={{ pl: 4 }} button key={text.name}>
                                     <ListItemText primary={text.name} />
                                 </ListItem>
