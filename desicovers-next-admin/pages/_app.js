@@ -13,11 +13,14 @@ import "../styles/css/responsive.css";
 import "../styles/css/rtl.css";
 import "../styles/css/widgets.css";
 import Head from "next/head";
-import React from 'react';
+import React, { Component } from 'react';
 import styles from '../styles/Home.module.css';
 import List from './components/list';
 import Box from "@mui/material/Box";
 import CssBaseline from '@mui/material/CssBaseline';
+import axios from 'axios';
+
+
 
 function MyApp({ Component, pageProps }) {
     return (

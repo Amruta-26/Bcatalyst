@@ -1,8 +1,24 @@
 import Head from "next/head";
 import Link from "next/link";
 import Sidebar from "./components/sidebar";
+import axios from "axios";
 
-export default function Home() {
+Home.getInitialProps = 
+  
+  async function() {
+  const res = await axios.get('https://desicover.herokuapp.com/get-all-products')
+  const data = await res.data
+
+  console.log(`Show data fetched. Count: ${data.length}`)
+
+  return {
+    data: data
+  }
+}
+
+
+
+export default function Home(props) {
     return (
         <>
 
@@ -32,21 +48,24 @@ export default function Home() {
                 </thead>
 
                 <tbody>
-                    <tr>
+                {props.data.map(ninja => (
+                    <tr key={ninja._id}>
+                        <td>{ninja.id}</td>
+                        <td>{ninja.productName}</td>
+                        <td>{ninja.productDescription}</td>
+                        <td>{ninja.price}</td>
+                        <td>{ninja.categoryName}</td>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td>}</td>
                         <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><img src="" alt="img1" height="100" width="100"/></td>
+                        <td><img src={ninja.productImage} alt="img1" height="100" width="100"/></td>
                         <td><img src="" alt="img2" height="100" width="100"/></td>
                         <td><img src="" alt="img3" height="100" width="100"/></td>
                     </tr>
+                ))}
                 </tbody>
             </table>
         </>
