@@ -1,3 +1,5 @@
+import Button from '@mui/material/Button';
+
 export default function PaymentRecieve() {
     return (
         <>
@@ -9,14 +11,14 @@ export default function PaymentRecieve() {
                     <tr>
 
 
-                        <th>COUPON CODE </th>
-                        <th>COUPON DESCRIPTION</th>
-                        <th>COUPON DISCOUNT</th>
-                        <th>USER LIMIT</th>
-                        <th>PRICE/PERCENTAGE</th>
-                        <th>START DATE</th>
-                        <th>END DATE</th>
-                        <th>ACTION</th>
+                        <th style={{ fontSize:"14px",padding:"10px 5px"}}>COUPON CODE </th>
+                        <th style={{ fontSize:"14px",padding:"10px 5px"}}>COUPON DESCRIPTION</th>
+                        <th style={{ fontSize:"14px",padding:"10px 5px"}}>COUPON DISCOUNT</th>
+                        <th style={{ fontSize:"14px",padding:"10px 5px"}}>USER LIMIT</th>
+                        <th style={{ fontSize:"14px",padding:"10px 5px"}}>PRICE/PERCENTAGE</th>
+                        <th style={{ fontSize:"14px",padding:"10px 5px"}}>START DATE</th>
+                        <th style={{ fontSize:"14px",padding:"10px 5px"}}>END DATE</th>
+                        <th style={{ fontSize:"14px",padding:"10px 5px"}}>ACTION</th>
 
                     </tr>
                 </thead>
@@ -31,15 +33,15 @@ export default function PaymentRecieve() {
                         <td></td>
                         <td></td>
                         <td>
-                            <a href="/editcoupon/"><span className='btn btn-info' >Edit Coupon</span></a>
-                            <a href="/deletecoupon/"><span className='btn btn-danger' >Delete Coupon</span></a>
+                        <Button variant="contained" href="/editcoupon/" style={{color:"#fff", fontWeight:"bold"}}>Edit Coupon</Button>
+                        <Button variant="contained" href="/deletecoupon/" style={{color:"#fff", fontWeight:"bold"}} color="error"> Delete Coupon</Button>
                         </td>
                     </tr>
                 </tbody>
             </table>
             <br />
             <br />
-            <center><a href="/coupon" className="btn btn-primary">Add New Coupon</a></center>
+            <center> <Button variant="contained" href="/coupon" style={{color:"#fff", fontWeight:"bold"}} color="success">Add New Coupon</Button></center>
 
         </>
     );
