@@ -34,21 +34,20 @@ export default function Home() {
                 </div>
             </form>
             <br />
-            <table id="gallery" className="table table-bordered" style={{ marginLeft: "10px", width: "98%" }}>
-                <thead>
-                    <tr>
-                        <th>Pincode</th>
-                        <th>Action</th>
+
+            <table id="gallery" className="table table-striped table-bordered table-sm" style={{ marginLeft: "10px", width: "98%"}}>
+            <thead className="thead-dark">
+                    <tr >
+                        <th style={{textAlign:"left", fontSize:"14px"}}>Pincode</th>
+                        <th style={{textAlign:"left", fontSize:"14px"}}>Action</th>
                     </tr>
                 </thead>
+
                 <tbody>
-
-
                     <tr>
                         <td></td>
                         <td><a href="/destroypincode/" className='btn btn-danger'><Button variant="contained">Delete</Button></a></td>
                     </tr>
-
                 </tbody>
             </table>
         </>

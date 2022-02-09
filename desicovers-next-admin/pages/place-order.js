@@ -1,29 +1,31 @@
-export default function PaymentRecieve() {
+import Button from '@mui/material/Button';
+
+export default function PlaceOrder() {
     return (
         <>
 
             <div className="table-responsive">
                 <div className="card card-body">
-                    <h4>Filter Orders:</h4>
+                    <h4 style={{ color: "#000", fontSize: "15px" }}>Filter Orders:</h4>
 
                     <form method="get">
-                        <button className="btn btn-primary" type="submit">Search</button>
+                    <Button variant="contained">Search</Button>
                     </form>
                 </div>
-
+        <br/><br/>
                 <table style={{marginLeft:"20px", width: "95%"}} className="table table-striped table-bordered table-sm">
                     <thead className="thead-dark">
-                        <tr>
-                            <th>Order Id</th>
-                            <th>Order Date</th>
-                            <th>Coupon</th>
-                            <th>Payment Mode</th>
-                            <th>Bank Name</th>
-                            <th>Payment Mode</th>
-                            <th>Currency</th>
-                            <th>TotalAmount</th>
-                            <th>Address</th>
-                            <th>Mobile Number</th>
+                        <tr >
+                            <th style={{ textAlign:"center", fontSize:"14px"}}>Order Id</th>
+                            <th style={{ textAlign:"center", fontSize:"14px"}}>Order Date</th>
+                            <th style={{ textAlign:"center", fontSize:"14px"}}>Coupon</th>
+                            <th style={{ textAlign:"center", fontSize:"14px"}}>Payment Mode</th>
+                            <th style={{ textAlign:"center", fontSize:"14px"}}>Bank Name</th>
+                            <th style={{ textAlign:"center", fontSize:"14px"}}>Payment Mode</th>
+                            <th style={{ textAlign:"center", fontSize:"14px"}}>Currency</th>
+                            <th style={{ textAlign:"center", fontSize:"14px"}}>TotalAmount</th>
+                            <th style={{ textAlign:"center", fontSize:"14px"}}>Address</th>
+                            <th style={{ textAlign:"center", fontSize:"14px"}}>Mobile Number</th>
                         </tr>
                     </thead>
 

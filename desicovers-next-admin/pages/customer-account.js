@@ -1,31 +1,40 @@
+import Button from '@mui/material/Button';
+
 export default function CustomerAccount() {
     return (
 
         <div>
+            <Button variant="outlined" href="/export_users_csv" sx={{my:2, mr:2, px:2, py:1}}>
+                <i className="fas fa-download fa-sm text-white-50"></i>&nbsp; Customer All Data</Button>
 
-            <a style={{ marginLeft: "20px" }} href="/export_users_csv" className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i className="fas fa-download fa-sm text-white-50"></i>Customer All Data</a>
-            <a href="/export_users_csv_day" className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i className="fas fa-download fa-sm text-white-50"></i>Customer Oneday Data</a>
-            <a href="/export_users_csv_week" className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i className="fas fa-download fa-sm text-white-50"></i>Customer Week Data</a>
-            <a href="/export_users_csv_month" className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i className="fas fa-download fa-sm text-white-50"></i>Customer Month Data</a>
+            <Button variant="outlined" href="/export_users_csv_day" sx={{my:2, mr:2, px:2, py:1}}>
+                <i className="fas fa-download fa-sm text-white-50"></i>&nbsp; Customer One Day Data</Button>
+
+            <Button variant="outlined" href="/export_users_csv_week" sx={{my:2, mr:2, px:2, py:1}}>
+                <i className="fas fa-download fa-sm text-white-50"></i>&nbsp; Customer Week Data</Button>
+   
+            <Button variant="outlined" href="/export_users_csv_month" sx={{my:2, mr:2, px:2, py:1}}>
+                <i className="fas fa-download fa-sm text-white-50"></i>&nbsp; Customer Month Data</Button>
 
             <div className="row">
                 <div className="col">
                     <div className="card card-body">
                         <form method="get">
-                            <button className="btn btn-primary" type="submit">Search</button>
+                        <Button variant="contained">Search</Button>
                         </form>
                     </div>
                 </div>
 
-                <table style={{ marginLeft: "20px", width: "98%" }} className="table table-striped table-bordered table-sm">
+            <br/>
+                <table style={{ marginLeft: "10px", width: "98%" }} className="table table-striped table-bordered table-sm">
                     <thead className="thead-dark">
                         <tr>
-                            <th>User Picture</th>
-                            <th>Name</th>
-                            <th>Mobile No</th>
-                            <th>Email</th>
-                            <th>City</th>
-                            <th>Joining Date</th>
+                            <th style={{ textAlign:"center", fontSize:"14px"}}>User Picture</th>
+                            <th style={{ textAlign:"center", fontSize:"14px"}}>Name</th>
+                            <th style={{ textAlign:"center", fontSize:"14px"}}>Mobile No</th>
+                            <th style={{ textAlign:"center", fontSize:"14px"}}>Email</th>
+                            <th style={{ textAlign:"center", fontSize:"14px"}}>City</th>
+                            <th style={{ textAlign:"center", fontSize:"14px"}}>Joining Date</th>
                         </tr>
                     </thead>
 

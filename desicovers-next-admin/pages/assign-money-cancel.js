@@ -5,14 +5,14 @@ export default function AssignMoneyCancel() {
         <table style={{ marginLeft: "20px", width: "98%" }} className="table table-striped table-bordered table-sm">
             <thead className="thead-dark">
                 <tr>
-                    <th>Order Id</th>
-                    <th>Order Date</th>
-                    <th>Customer Name</th>
-                    <th>Payment</th>
-                    <th>Cancel Info</th>
-                    <th>Date of Cancel</th>
-                    <th>Amount</th>
-                    <th>Initiate Into Wallet</th>
+                    <th style={{ textAlign:"center", fontSize:"14px"}}>Order Id</th>
+                    <th style={{ textAlign:"center", fontSize:"14px"}}>Order Date</th>
+                    <th style={{ textAlign:"center", fontSize:"14px"}}>Customer Name</th>
+                    <th style={{ textAlign:"center", fontSize:"14px"}}>Payment</th>
+                    <th style={{ textAlign:"center", fontSize:"14px"}}>Cancel Info</th>
+                    <th style={{ textAlign:"center", fontSize:"14px"}}>Date of Cancel</th>
+                    <th style={{ textAlign:"center", fontSize:"14px"}}>Amount</th>
+                    <th style={{ textAlign:"center", fontSize:"14px"}}>Initiate Into Wallet</th>
 
                 </tr>
             </thead>

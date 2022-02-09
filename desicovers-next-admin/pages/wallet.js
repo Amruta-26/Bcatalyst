@@ -1,12 +1,15 @@
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+
 export default function PaymentRecieve() {
     return (
-        <table className="table table-striped table-bordered table-sm">
+        <table className="table table-striped table-bordered table-sm" style={{ marginLeft: "10px", width: "98%" }}>
             <thead className="thead-dark">
                 <tr>
-                    <th>Wallet Id</th>
-                    <th>Customer Name</th>
-                    <th>Amount</th>
-                    <th>Add Money</th>
+                    <th style={{ textAlign: "center", fontSize: "14px" }}>Wallet Id</th>
+                    <th style={{ textAlign: "center", fontSize: "14px" }}>Customer Name</th>
+                    <th style={{ textAlign: "center", fontSize: "14px" }}>Amount</th>
+                    <th style={{ textAlign: "center", fontSize: "14px" }}>Add Money</th>
                 </tr>
             </thead>
 
@@ -24,10 +27,21 @@ export default function PaymentRecieve() {
                         >
                             <div className="form-group">
                                 <label className="col-md-3 col-sm-3 col-xs-12 control-label"
-                                >Money</label
+                                    style={{ color: "#000", fontSize: "15px", margin: "5px" }}>Money</label
                                 >
+                                <br /><br />
                                 <div className="col-md-8">
-                                    <input type="number" name="addmoney" required />
+                                    <TextField
+                                        type="number"
+                                        name="addmoney" required
+                                        InputProps={{
+                                            inputProps: {
+                                                max: 100000, min: 10
+                                            }
+                                        }}
+                                        label="Add"
+                                        sx={{ px: "5px", py: "5px" }} />
+                                    <br /><br />
                                     <input
                                         type="hidden"
                                         name="Id"
@@ -37,13 +51,7 @@ export default function PaymentRecieve() {
                             </div>
 
                             <div className="form-group">
-                                <button className="btn btn-primary">
-                                    <span
-                                        className="glyphicon glyphicon-upload"
-                                        style={{ marginRight: "5px" }}
-                                    ></span
-                                    >Add Wallet
-                                </button>
+                                <Button variant="contained">Add Wallet </Button>
                             </div>
                         </form>
                     </td>
