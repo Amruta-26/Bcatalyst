@@ -13,10 +13,15 @@ import "../styles/css/responsive.css";
 import "../styles/css/rtl.css";
 import "../styles/css/widgets.css";
 import "../styles/css/cancelorder.css"
-import Head from "next/head";
+import Button from '@mui/material/Button';
+
 import React, { Component } from 'react';
 import styles from '../styles/Home.module.css';
-import List from './components/list';
+import Typography from '@mui/material/Typography';
+import '@fortawesome/fontawesome-free/js/fontawesome';
+import '@fortawesome/fontawesome-free/js/solid';
+import '@fortawesome/fontawesome-free/js/regular';
+import '@fortawesome/fontawesome-free/js/brands';
 import Box from "@mui/material/Box";
 import CssBaseline from '@mui/material/CssBaseline';
 import axios from 'axios';
