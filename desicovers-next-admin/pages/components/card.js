@@ -11,7 +11,7 @@ import Typography from '@mui/material/Typography';
 
 export default function BasicCard(props) {
   return (
-    <Card className="temp" sx={{ minWidth: 300, borderLeft: 'solid #0096FF 2px', marginTop: '10px' }}>
+    <Card className="temp" sx={{ minWidth: 210, borderLeft: 'solid #0096FF 2px', marginTop: '10px' }}>
       <CardContent>
           <Typography gutterBottom variant="body2" color={props.color} component="div">
           {props.title}

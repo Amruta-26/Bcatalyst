@@ -24,7 +24,7 @@ import '@fortawesome/fontawesome-free/js/brands';
 import Box from "@mui/material/Box";
 import CssBaseline from '@mui/material/CssBaseline';
 import axios from 'axios';
-
+import Grid from "@mui/material/Grid";
 
 
 function MyApp({ Component, pageProps }) {
@@ -35,11 +35,12 @@ function MyApp({ Component, pageProps }) {
         // </>
 
         <Box sx={{ display: 'flex' }}>
+          
         <CssBaseline />
   
         <Box
           
-          sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3, ml: 38 }}
+          sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3, ml: 28 }}
         >
             <Component {...pageProps} />
         
