@@ -50,10 +50,10 @@ export default function Home() {
                                 <div className="toolbox-right">
                                     <div className="toolbox-sort">
                                         <InputLabel id="sortby">Sort by:</InputLabel>
-                                        <Select labelId="sortby" id="sortby" value="1" className="form-control">
-                                            <MenuItem value="1">Most Popular</MenuItem>
-                                            <MenuItem value="2">Most Rated</MenuItem>
-                                            <MenuItem value="3">Date</MenuItem>
+                                        <Select labelId="sortby" id="sortby" value="popular" className="form-control">
+                                            <MenuItem value="popular">Most Popular</MenuItem>
+                                            <MenuItem value="rated">Most Rated</MenuItem>
+                                            <MenuItem value="date">Date</MenuItem>
                                         </Select>
                                     </div>
                                 </div>

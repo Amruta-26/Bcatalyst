@@ -99,7 +99,7 @@ export default function AddCoupon() {
 
                     <br />
                     <tr style={{ textAlign: "right" }}>
-                        <td> <Button sx={{ mt: 1, mr: 1 }} type="submit" variant="outlined">Submit</Button></td>
+                        <td> <Button sx={{ mt: 1, mr: 1, fontWeight: "bolder", border: "3px solid"}} type="submit" variant="outlined">Submit</Button></td>
                     </tr>
 
                 </table>

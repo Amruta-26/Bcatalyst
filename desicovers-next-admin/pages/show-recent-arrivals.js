@@ -1,14 +1,17 @@
 export default function ShowRecentArrivals() {
   return (
-    <table className="table table-striped table-bordered table-sm">
+    <>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossOrigin="anonymous" />
+    
+            <table className="table table-striped table-bordered table-sm">
       <thead className="thead-dark">
         <tr>
-          <th>ID</th>
-          <th>PRODUCT NAME</th>
-          <th>PRODUCT DESCRIPTION</th>
-          <th>PRODUCT IMAGE</th>
-          <th>PRODUCT PRICE</th>
-          <th>ACTION</th>
+          <th style={{ textAlign:"center", fontSize:"14px"}}>ID</th>
+          <th style={{ textAlign:"center", fontSize:"14px"}}>PRODUCT NAME</th>
+          <th style={{ textAlign:"center", fontSize:"14px"}}>PRODUCT DESCRIPTION</th>
+          <th style={{ textAlign:"center", fontSize:"14px"}}>PRODUCT IMAGE</th>
+          <th style={{ textAlign:"center", fontSize:"14px"}}>PRODUCT PRICE</th>
+          <th style={{ textAlign:"center", fontSize:"14px"}}>ACTION</th>
         </tr>
       </thead>
 
@@ -23,12 +26,14 @@ export default function ShowRecentArrivals() {
 
           <td></td>
           <td>
-            <a href="/deletrecent/" className="btn btn-danger">
+            <a href="/deletrecent/" className="btn btn-danger text-light">
               Delete
             </a>
           </td>
         </tr>
       </tbody>
     </table>
+    </>
+   
   );
 }

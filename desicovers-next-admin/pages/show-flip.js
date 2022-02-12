@@ -1,27 +1,33 @@
+import Button from '@mui/material/Button';
+
 export default function ShowFlip() {
   return (
-    <table className="table table-striped table-bordered table-sm">  
-    <thead className="thead-dark">  
-        <tr>               
-            <th>PRODUCT ID</th>  
-            <th>PRODUCT NAME</th>    
-            <th>PRODUCT DESCRIPTION</th>
-            <th>PRODUCT IMAGE</th>
-                         
-        </tr>  
-    </thead>  
-    
-    <tbody> 
-            <tr> 
-                <td></td>  
-                <td></td>   
-                <td></td>
-                <td><img src="" height="100" width="100"/></td>
-               
-            
-            </tr>                         
-    </tbody>
-    </table>
-    
+    <>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossOrigin="anonymous" />
+      <table className="table table-striped table-bordered table-sm">
+        <thead className="thead-dark">
+          <tr>
+            <th style={{ fontSize:"14px",padding:"10px 5px"}}>PRODUCT ID</th>
+            <th style={{ fontSize:"14px",padding:"10px 5px"}}>PRODUCT NAME</th>
+            <th style={{ fontSize:"14px",padding:"10px 5px"}}>PRODUCT DESCRIPTION</th>
+            <th style={{ fontSize:"14px",padding:"10px 5px"}}>PRODUCT IMAGE</th>
+
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><img src="" height="100" width="100" /></td>
+
+
+          </tr>
+        </tbody>
+      </table>
+    </>
+
+
   );
 }
