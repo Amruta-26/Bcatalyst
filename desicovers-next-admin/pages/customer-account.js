@@ -1,11 +1,12 @@
 import Button from '@mui/material/Button';
+import Image from 'next/image';
 
 export default function CustomerAccount() {
     return (
         <>
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossOrigin="anonymous" />
 
-           
+
                 <Button variant="outlined" href="/export_users_csv" sx={{ my: 2, mr: 2, px: 2, py: 1 }}>
                     <i className="fas fa-download fa-sm "></i>&nbsp; Customer All Data</Button>
 
@@ -38,8 +39,8 @@ export default function CustomerAccount() {
 
                     <tbody>
                         <tr>
-                            <td><img src="" height="100" width="100" /></td>
-                            <td><img src="" alt="Snow" height="100" width="100" /></td>
+                            <td><Image src="" height="100" width="100" alt="cool"/></td>
+                            <td><Image src="" alt="Snow" height="100" width="100" /></td>
                             <td> &nbsp;&nbsp;</td>
                             <td></td>
                             <td></td>

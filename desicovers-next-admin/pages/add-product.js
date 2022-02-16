@@ -129,24 +129,32 @@ function UploadExcel() {
     };
 
     const uploadFile = async () => {
-        var delayInMilliseconds = 1000; //1 second
+        var delayInMilliseconds = 1000; //5 second
         const id = toast.loading("Please wait... Uploading");
-        data.map(async (item, index) => {
+        // await data.map(async (item, index) => {
+        //add a delay of 500millisecond
+        for (let i = 0; i < data.length; i++) {
+            // await new Promise((resolve) => {
+            setTimeout(() => {
+                console.log("hello");
+            }, delayInMilliseconds);
+            // });
             await axios
-                .post("http://localhost:8000/bulk-insert-products", {
-                    id: index,
-                    productData: item,
+                .post("https://desicover.herokuapp.com/bulk-insert-products", {
+                    id: i,
+                    productData: data[i],
                 })
                 .then((res) => {
-                    toast.warn(id, {
-                        render: "Total Uploaded" + index,
-                        isLoading: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                    });
+                    console.log(res.data);
+                    // toast.warn(id, {
+                    //     render: "Total Uploaded" + index,
+                    //     isLoading: false,
+                    //     closeOnClick: true,
+                    //     pauseOnHover: true,
+                    //     draggable: true,
+                    // });
                 });
-        });
+        }
         toast.update(id, {
             render: "Uploaded items",
             type: "success",

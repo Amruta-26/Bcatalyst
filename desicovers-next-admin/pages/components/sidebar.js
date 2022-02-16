@@ -134,7 +134,7 @@ const CollapsibleCustomComponent = ({ item, title }) => {
                 <ListItemIcon>
                     <FolderIcon sx={{ color: "#fff" }} />
                 </ListItemIcon>
-                <ListItemText primary={title} /> 
+                <ListItemText primary={title} />
                 {open ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
             <div className="dropdown">
@@ -142,7 +142,7 @@ const CollapsibleCustomComponent = ({ item, title }) => {
                     <div className="drop-fade">BASIC SERVICES:</div>
                     <List component="div" disablePadding>
                         {item.map((text, index) => (
-                            <Link href={text.link} key={index}>
+                            <Link href={text.link} key={index} passHref>
                                 <ListItem sx={{ pl: 4 }} button key={text.name}>
                                     <ListItemText primary={text.name} />
                                 </ListItem>

@@ -2,30 +2,32 @@ import Head from "next/head";
 import Link from "next/link";
 import Sidebar from "./components/sidebar";
 import axios from "axios";
+import Image from "next/image";
 
-Home.getInitialProps = 
-  
-  async function() {
-  const res = await axios.get('https://desicover.herokuapp.com/get-all-products')
-  const data = await res.data
+Home.getInitialProps = async function () {
+    const res = await axios.get(
+        "https://desicover.herokuapp.com/get-all-products"
+    );
+    const data = await res.data;
 
-  console.log(`Show data fetched. Count: ${data.length}`)
+    console.log(`Show data fetched. Count: ${data.length}`);
 
-  return {
-    data: data
-  }
-}
-
-
+    return {
+        data: data,
+    };
+};
 
 export default function Home(props) {
     return (
         <>
-
             <Head>
-                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+                <link
+                    rel="stylesheet"
+                    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+                    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+                    crossOrigin="anonymous"
+                />
             </Head>
-
 
             <table className="table table-striped table-bordered table-sm">
                 <thead className="thead-dark">
@@ -48,24 +50,45 @@ export default function Home(props) {
                 </thead>
 
                 <tbody>
-                {props.data.map(ninja => (
-                    <tr key={ninja._id}>
-                        <td>{ninja.id}</td>
-                        <td>{ninja.productName}</td>
-                        <td>{ninja.productDescription}</td>
-                        <td>{ninja.price}</td>
-                        <td>{ninja.categoryName}</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><img src={ninja.productImage} alt="img1" height="100" width="100"/></td>
-                        <td><img src="" alt="img2" height="100" width="100"/></td>
-                        <td><img src="" alt="img3" height="100" width="100"/></td>
-                    </tr>
-                ))}
+                    {props.data.map((ninja) => (
+                        <tr key={ninja._id}>
+                            <td>{ninja.id}</td>
+                            <td>{ninja.productName}</td>
+                            <td>{ninja.productDescription}</td>
+                            <td>{ninja.price}</td>
+                            <td>{ninja.categoryName}</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <Image
+                                    src={ninja.productImage}
+                                    alt="img1"
+                                    height="100"
+                                    width="100"
+                                />
+                            </td>
+                            <td>
+                                <Image
+                                    src=""
+                                    alt="img2"
+                                    height="100"
+                                    width="100"
+                                />
+                            </td>
+                            <td>
+                                <Image
+                                    src=""
+                                    alt="img3"
+                                    height="100"
+                                    width="100"
+                                />
+                            </td>
+                        </tr>
+                    ))}
                 </tbody>
             </table>
         </>

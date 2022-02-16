@@ -6,6 +6,7 @@ import OutlinedInput from '@mui/material/OutlinedInput';
 import TextField from '@mui/material/TextField';
 import Select from "@mui/material/Select";
 import Button from "@mui/material/Button";
+import Image from "next/image";
 
 export default function HomePageCarouselImage() {
   return (
@@ -38,7 +39,7 @@ export default function HomePageCarouselImage() {
           </label>
           <br/>
           <TextField id="outlined-basic" style={{ padding:"12px 5px"}} label="" variant="outlined" />
-          
+
         </div>
 
         <div className="form-group">
@@ -69,7 +70,7 @@ export default function HomePageCarouselImage() {
         </Select>
         </div>
         </div>
-                            
+
         <div className="form-group">
                     <div className="col-md-3 col-sm-3 col-xs-12 col-md-offset-3" style={{ marginTop: "20px" }}>
                         <Button variant="contained">Upload </Button>
@@ -89,7 +90,7 @@ export default function HomePageCarouselImage() {
         <tbody>
           <tr>
               <td>
-              <img
+              <Image
                 src=""
                 alt="Product image"
                 className="product-image"

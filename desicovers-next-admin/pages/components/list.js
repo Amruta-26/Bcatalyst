@@ -22,51 +22,55 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
 }));
 
 const List = (props) => {
-  if (props.items.length === 0) {
-    return <h2 className="expenses-list__fallback">Found no Expenses!</h2>;
-  }
-  return (
-    <>
-      {/* <PrimarySearchAppBar /> */}
-      <Container sx={{ml:-30, marginTop: '10px' }}>
-        <br/>
-        <strong>Dashboard</strong>
-        <br/>
-        <Grid container spacing={27}>
-          {props.items.map((item) => (
-            <Grid item xs={12} sm={6} md={3} key={item.id}>
-              <BasicCard
-                title={item.title}
-                amount={item.amount}
-                color={item.color}
-              />
-            </Grid>
-          ))}
-        </Grid>
-        <br/>
-        <Grid container spacing={10}>
-          <Grid item xs={12} md={8}>
-            <LargeCard title={"Earnings Overview"}>
-           
-            </LargeCard>
-            <BorderLinearProgress variant="determinate" value={50}/>
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <LargeCard title={"Product Sales"} component={"img"} />
-          </Grid>
-        </Grid>
-        <br/>
-        <Grid container spacing={40}>
-          <Grid item xs={6} md={3}>
-            <LargeCard title={"Projects"} component={"BorderLinearProgress"} />
-          </Grid>
-          <Grid item xs={6} md={3}>
-            <LargeCard title={"Illustrations"} component={"text"} />
-          </Grid>
-        </Grid>
-      </Container>
-    </>
-  );
+    //   if (props.items.length === 0) {
+    //     return <h2 className="expenses-list__fallback">Found no Expenses!</h2>;
+    //   }
+    return (
+        <>
+            {/* <PrimarySearchAppBar /> */}
+            <Container sx={{ ml: -30, marginTop: "10px" }}>
+                <br />
+                <strong>Dashboard</strong>
+                <br />
+                <Grid container spacing={27}>
+                    {props.items.map((item) => (
+                        <Grid item xs={12} sm={6} md={3} key={item.id}>
+                            <BasicCard
+                                title={item.title}
+                                amount={item.amount}
+                                color={item.color}
+                            />
+                        </Grid>
+                    ))}
+                </Grid>
+                <br />
+                <Grid container spacing={10}>
+                    <Grid item xs={12} md={8}>
+                        <LargeCard title={"Earnings Overview"}></LargeCard>
+                        <BorderLinearProgress
+                            variant="determinate"
+                            value={50}
+                        />
+                    </Grid>
+                    <Grid item xs={12} md={4}>
+                        <LargeCard title={"Product Sales"} component={"img"} />
+                    </Grid>
+                </Grid>
+                <br />
+                <Grid container spacing={40}>
+                    <Grid item xs={6} md={3}>
+                        <LargeCard
+                            title={"Projects"}
+                            component={"BorderLinearProgress"}
+                        />
+                    </Grid>
+                    <Grid item xs={6} md={3}>
+                        <LargeCard title={"Illustrations"} component={"text"} />
+                    </Grid>
+                </Grid>
+            </Container>
+        </>
+    );
 };
 
 export default List;

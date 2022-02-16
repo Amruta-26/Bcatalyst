@@ -5,6 +5,7 @@ import FormHelperText from '@mui/material/FormHelperText';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Button from '@mui/material/Button';
+import Image from 'next/image';
 
 export default function Home() {
     return (
@@ -67,7 +68,7 @@ export default function Home() {
                                             <figure className="product-media" style={{ width: "100%", height: "300px" }}>
                                                 <span className="product-label label-new">New</span>
                                                 <a href="">
-                                                    <img src="" alt="Product image" className="product-image" />
+                                                    <Image src="" alt="Product image" className="product-image" />
                                                 </a>
                                             </figure>
                                             <div className="product-body">

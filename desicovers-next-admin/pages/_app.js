@@ -47,9 +47,12 @@ function MyApp({ Component, pageProps }) {
             >
                 <Component {...pageProps} />
             </Box>
-            <div>{/* <Sidebar /> */}</div>
+            <div>
+                <Sidebar />{" "}
+            </div>
         </Box>
     );
 }
 
 export default MyApp;
+
