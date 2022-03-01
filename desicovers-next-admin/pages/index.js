@@ -26,9 +26,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main >
+      <main>
         <List/>
       </main>
+      
     </div>
     </Box>
       <div>
