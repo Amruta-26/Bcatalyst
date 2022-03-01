@@ -41,7 +41,7 @@ export default function Review() {
                         <td></td>
                         <td>
                             <Image
-                                src=""
+                                src="/producimage"
                                 alt="Product image"
                                 className="product-image"
                                 height="100px"

@@ -53,10 +53,10 @@ export default function Home(props) {
                     {props.data.map((ninja) => (
                         <tr key={ninja._id}>
                             <td>{ninja.id}</td>
-                            <td>{ninja.productName}</td>
-                            <td>{ninja.productDescription}</td>
-                            <td>{ninja.price}</td>
-                            <td>{ninja.categoryName}</td>
+                            <td>{ninja.productData.name}</td>
+                            <td>{ninja.productData.description}</td>
+                            <td>{ninja.productData.price}</td>
+                            <td>{ninja.productData.category}</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -64,28 +64,28 @@ export default function Home(props) {
                             <td></td>
                             <td></td>
                             <td>
-                                <Image
-                                    src={ninja.productImage}
+                                {/* <Image
+                                    src={ninja.productData.image}
                                     alt="img1"
                                     height="100"
                                     width="100"
-                                />
+                                /> */}
                             </td>
                             <td>
-                                <Image
+                                {/* <Image
                                     src=""
                                     alt="img2"
                                     height="100"
                                     width="100"
-                                />
+                                /> */}
                             </td>
                             <td>
-                                <Image
+                                {/* <Image
                                     src=""
                                     alt="img3"
                                     height="100"
                                     width="100"
-                                />
+                                /> */}
                             </td>
                         </tr>
                     ))}

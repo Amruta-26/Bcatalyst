@@ -39,8 +39,8 @@ export default function CustomerAccount() {
 
                     <tbody>
                         <tr>
-                            <td><Image src="" height="100" width="100" alt="cool"/></td>
-                            <td><Image src="" alt="Snow" height="100" width="100" /></td>
+                            <td><Image src="/productImage1" height="100" width="100" alt="cool"/></td>
+                            <td><Image src="/productImage2" alt="Snow" height="100" width="100" /></td>
                             <td> &nbsp;&nbsp;</td>
                             <td></td>
                             <td></td>

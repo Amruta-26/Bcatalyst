@@ -68,7 +68,7 @@ export default function Home() {
                                             <figure className="product-media" style={{ width: "100%", height: "300px" }}>
                                                 <span className="product-label label-new">New</span>
                                                 <a href="">
-                                                    <Image src="" alt="Product image" className="product-image" />
+                                                    <Image src="/ProductImage" alt="Product image" width="100" height="100" className="product-image" />
                                                 </a>
                                             </figure>
                                             <div className="product-body">
