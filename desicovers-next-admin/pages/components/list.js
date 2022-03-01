@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import { styled } from '@mui/material/styles';
 import BasicCard from "./card";
 import Grid from "@mui/material/Grid";
@@ -21,19 +21,42 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   },
 }));
 
-const List = (props) => {
-    //   if (props.items.length === 0) {
-    //     return <h2 className="expenses-list__fallback">Found no Expenses!</h2>;
-    //   }
+const dummy_items = [
+    {
+      id: 'e1',
+      title: "EARNINGS(MONTHLY)",
+      amount: 94.12,
+      color: "#00008B",
+    },
+    {
+      id: 'e2',
+      title: "EARNINGS(ANNUAL)",
+      amount: 799.49,
+      color: "#006400",
+    },
+    {
+      id: 'e3',
+      title: "NO. OF PRODUCTS",
+      amount: 294.67,
+      color: "#CCCC00",
+    },
+    {
+      id: 'e4',
+      title: "CANCELLED ORDERS",
+      amount: 450,
+      color: "#7D0552",
+    },
+  ];
+  
+const List = () => {
     return (
         <>
-            {/* <PrimarySearchAppBar /> */}
             <Container sx={{ ml: -30, marginTop: "10px" }}>
                 <br />
                 <strong>Dashboard</strong>
                 <br />
                 <Grid container spacing={27}>
-                    {props.items.map((item) => (
+                    {dummy_items.map((item) => (
                         <Grid item xs={12} sm={6} md={3} key={item.id}>
                             <BasicCard
                                 title={item.title}

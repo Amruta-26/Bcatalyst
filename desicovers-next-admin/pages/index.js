@@ -8,35 +8,6 @@ import Box from "@mui/material/Box";
 import CssBaseline from '@mui/material/CssBaseline';
 // import PrimarySearchAppBar from "./components/navbar";
 
-
-const dummy_items = [
-  {
-    id: 'e1',
-    title: "EARNINGS(MONTHLY)",
-    amount: 94.12,
-    color: "#00008B",
-  },
-  {
-    id: 'e2',
-    title: "EARNINGS(ANNUAL)",
-    amount: 799.49,
-    color: "#006400",
-  },
-  {
-    id: 'e3',
-    title: "NO. OF PRODUCTS",
-    amount: 294.67,
-    color: "#CCCC00",
-  },
-  {
-    id: 'e4',
-    title: "CANCELLED ORDERS",
-    amount: 450,
-    color: "#7D0552",
-  },
-];
-
-
 export default function Home() {
   return (
     <Box sx={{ display: 'flex' }}>
@@ -56,9 +27,8 @@ export default function Home() {
       </Head>
 
       <main >
-        <List items={dummy_items}/>
+        <List/>
       </main>
-
     </div>
     </Box>
       <div>
