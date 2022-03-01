@@ -51,8 +51,7 @@ c               dn.com/bootstrap/4.3.1/css/boot
                         i
                         d="csv_file"
                         required="True"
-                        className="
-f                           orm-control"
+                        className="form-control"
                     />
                     <br />
 
@@ -106,7 +105,7 @@ f                           orm-control"
 
                         <td>
                             <Image
-                                src=""
+                                src="/productImage"
                                 alt="Product image"
                                 className="product-image"
                                 height="100px"

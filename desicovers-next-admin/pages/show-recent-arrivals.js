@@ -41,7 +41,7 @@ export default function ShowRecentArrivals() {
                         <td></td>
                         <td>
                             <Image
-                                src=""
+                                src="/productImage"
                                 height="100"
                                 width="100"
                                 alt="Some Product"

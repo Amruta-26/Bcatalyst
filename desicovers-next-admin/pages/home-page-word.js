@@ -90,7 +90,7 @@ export default function HomePageWord() {
           <tr>
               <td>
               <Image
-                src=""
+                src="/productImage"
                 alt="Product image"
                 className="product-image"
                 height="100px"

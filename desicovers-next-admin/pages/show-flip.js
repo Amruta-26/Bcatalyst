@@ -35,7 +35,7 @@ export default function ShowFlip() {
                         <td></td>
                         <td>
                             <Image
-                                src=""
+                                src="/productImage"
                                 height="100"
                                 width="100"
                                 alt="Some text"

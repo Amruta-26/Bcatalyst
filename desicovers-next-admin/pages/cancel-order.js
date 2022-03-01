@@ -28,7 +28,7 @@ export default function CancelOrder() {
                     </ul>
                 </div>
                 <span id="order">
-                    {" "}
+                    {/* {" "} */}
                     Order Id: <a href="#"></a>
                 </span>
                 <span id="detail">Order placed</span>
