@@ -42,7 +42,7 @@ function MyApp({ Component, pageProps }) {
                     flexGrow: 1,
                     bgcolor: "background.default",
                     p: 3,
-                    ml: 28,
+                    ml: 34,
                 }}
             >
                 <Component {...pageProps} />
