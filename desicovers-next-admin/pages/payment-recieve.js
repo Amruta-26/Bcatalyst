@@ -3,30 +3,104 @@ import Button from '@mui/material/Button';
 export default function PaymentRecieve() {
     return (
         <>
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossOrigin="anonymous" />
-
             <div className="table-responsive">
                 <div className="card card-body">
-                    <h4 style={{ color: "#000", fontSize: "15px" }}>Filter Orders:</h4>
+                    <h4 style={{ color: "#000", fontSize: "15px" }}>
+                        Filter Orders:
+                    </h4>
 
                     <form method="get">
-                    <Button variant="contained">Search</Button>
+                        <Button variant="contained">Search</Button>
                     </form>
                 </div>
-        <br/><br/>
-                <table style={{marginLeft:"20px", width: "95%"}} className="table table-striped table-bordered table-sm">
+                <br />
+                <br />
+                <table
+                    style={{ marginLeft: "20px", width: "95%" }}
+                    className="table table-striped table-bordered table-sm"
+                >
                     <thead className="thead-dark">
-                        <tr >
-                            <th style={{ textAlign:"center", fontSize:"14px"}}>Order Id</th>
-                            <th style={{ textAlign:"center", fontSize:"14px"}}>Order Date</th>
-                            <th style={{ textAlign:"center", fontSize:"14px"}}>Coupon</th>
-                            <th style={{ textAlign:"center", fontSize:"14px"}}>Payment Mode</th>
-                            <th style={{ textAlign:"center", fontSize:"14px"}}>Bank Name</th>
-                            <th style={{ textAlign:"center", fontSize:"14px"}}>Payment Mode</th>
-                            <th style={{ textAlign:"center", fontSize:"14px"}}>Currency</th>
-                            <th style={{ textAlign:"center", fontSize:"14px"}}>TotalAmount</th>
-                            <th style={{ textAlign:"center", fontSize:"14px"}}>Address</th>
-                            <th style={{ textAlign:"center", fontSize:"14px"}}>Mobile Number</th>
+                        <tr>
+                            <th
+                                style={{
+                                    textAlign: "center",
+                                    fontSize: "14px",
+                                }}
+                            >
+                                Order Id
+                            </th>
+                            <th
+                                style={{
+                                    textAlign: "center",
+                                    fontSize: "14px",
+                                }}
+                            >
+                                Order Date
+                            </th>
+                            <th
+                                style={{
+                                    textAlign: "center",
+                                    fontSize: "14px",
+                                }}
+                            >
+                                Coupon
+                            </th>
+                            <th
+                                style={{
+                                    textAlign: "center",
+                                    fontSize: "14px",
+                                }}
+                            >
+                                Payment Mode
+                            </th>
+                            <th
+                                style={{
+                                    textAlign: "center",
+                                    fontSize: "14px",
+                                }}
+                            >
+                                Bank Name
+                            </th>
+                            <th
+                                style={{
+                                    textAlign: "center",
+                                    fontSize: "14px",
+                                }}
+                            >
+                                Payment Mode
+                            </th>
+                            <th
+                                style={{
+                                    textAlign: "center",
+                                    fontSize: "14px",
+                                }}
+                            >
+                                Currency
+                            </th>
+                            <th
+                                style={{
+                                    textAlign: "center",
+                                    fontSize: "14px",
+                                }}
+                            >
+                                TotalAmount
+                            </th>
+                            <th
+                                style={{
+                                    textAlign: "center",
+                                    fontSize: "14px",
+                                }}
+                            >
+                                Address
+                            </th>
+                            <th
+                                style={{
+                                    textAlign: "center",
+                                    fontSize: "14px",
+                                }}
+                            >
+                                Mobile Number
+                            </th>
                         </tr>
                     </thead>
 

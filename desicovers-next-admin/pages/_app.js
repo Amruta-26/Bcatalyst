@@ -26,6 +26,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import axios from "axios";
 import Grid from "@mui/material/Grid";
 import "react-toastify/dist/ReactToastify.css";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
     return (
@@ -33,26 +34,34 @@ function MyApp({ Component, pageProps }) {
         //     <Sidebar />
         //     <Component {...pageProps} />
         // </>
+        <>
+            <Head>
+                <link
+                    rel="stylesheet"
+                    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+                    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+                    crossOrigin="anonymous"
+                />
+            </Head>
+            <Box sx={{ display: "flex" }}>
+                <CssBaseline />
 
-        <Box sx={{ display: "flex" }}>
-            <CssBaseline />
-
-            <Box
-                sx={{
-                    flexGrow: 1,
-                    bgcolor: "background.default",
-                    p: 3,
-                    ml: 34,
-                }}
-            >
-                <Component {...pageProps} />
+                <Box
+                    sx={{
+                        flexGrow: 1,
+                        bgcolor: "background.default",
+                        p: 3,
+                        ml: 34,
+                    }}
+                >
+                    <Component {...pageProps} />
+                </Box>
+                <div>
+                    <Sidebar />{" "}
+                </div>
             </Box>
-            <div>
-                <Sidebar />{" "}
-            </div>
-        </Box>
+        </>
     );
 }
 
 export default MyApp;
-
