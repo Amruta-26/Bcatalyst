@@ -129,7 +129,7 @@ function UploadExcel() {
     };
 
     const uploadFile = async () => {
-        var delayInMilliseconds = 1000; //5 second
+        var delayInMilliseconds = 1000; //1 second
         const id = toast.loading("Please wait... Uploading");
         // await data.map(async (item, index) => {
         //add a delay of 500millisecond
@@ -163,7 +163,7 @@ function UploadExcel() {
             pauseOnHover: true,
             draggable: true,
         });
-    };
+    };;
     const convertToJson = (headers, data) => {
         const rows = [];
         data.forEach((row) => {
