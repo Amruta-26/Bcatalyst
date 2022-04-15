@@ -1,15 +1,37 @@
-import React from 'react';
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormControl from '@mui/material/FormControl';
-import FormHelperText from '@mui/material/FormHelperText';
-import FormLabel from '@mui/material/FormLabel';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import React, { useSta } from "react";
+import Radio from "@mui/material/Radio";
+import RadioGroup from "@mui/material/RadioGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import FormControl from "@mui/material/FormControl";
+import FormHelperText from "@mui/material/FormHelperText";
+import FormLabel from "@mui/material/FormLabel";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 
 export default function AddCoupon() {
+    const initialCouponData = {
+        id: "",
+        couponCode: "",
+        couponDescription: "",
+        couponUserLimit: "",
+        couponUsedTimes: "",
+        couponDiscountType: "",
+        couponDiscountValue: "",
+    };
+    const [coupon, setCoupon] = useState(initialCouponData);
+    const addCoupon = () => {
+        axios
+            .post("http://desicover.herokuapp.com/create-new-coupon", coupon)
+            .then((res) => {
+                console.log(res);
+                clearFields();
+                // props.history.push("/");
+            });
+    };
+    const clearFields = () => {
+        setCoupon(initialCouponData);
+    };
     return (
         <>
             <Typography variant="h4" gutterBottom component="div">
@@ -24,6 +46,7 @@ export default function AddCoupon() {
                                 style={{
                                     marginTop: "5px",
                                     fontSize: "16px",
+
                                     color: "#000",
                                 }}
                             >
@@ -36,6 +59,13 @@ export default function AddCoupon() {
                                 required
                                 name="ccode"
                                 id="outlined-required"
+                                value={coupon.couponCode}
+                                onChange={(e) =>
+                                    setProduct({
+                                        ...product,
+                                        productName: e.target.value,
+                                    })
+                                }
                             />
                         </td>
                     </tr>
@@ -191,18 +221,12 @@ export default function AddCoupon() {
                     <tr style={{ textAlign: "right" }}>
                         <td>
                             {" "}
-                            <Button
-                                sx={{
-                                    mt: 1,
-                                    mr: 1,
-                                    fontWeight: "bolder",
-                                    border: "3px solid",
-                                }}
-                                type="submit"
-                                variant="outlined"
+                            <button
+                                className="btn btn-submit btn-primary"
+                                onClick={() => addCoupon()}
                             >
-                                Submit
-                            </Button>
+                                Add Coupon
+                            </button>
                         </td>
                     </tr>
                 </table>

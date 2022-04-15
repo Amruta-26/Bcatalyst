@@ -133,7 +133,7 @@ function UploadExcel() {
         const id = toast.loading("Please wait... Uploading");
         // await data.map(async (item, index) => {
         //add a delay of 500millisecond
-        for (let i = 0; i < data.length; i++) {
+        for (let index = 0; index < data.length; index++) {
             // await new Promise((resolve) => {
             setTimeout(() => {
                 console.log("hello");
@@ -141,8 +141,7 @@ function UploadExcel() {
             // });
             await axios
                 .post("https://desicover.herokuapp.com/bulk-insert-products", {
-                    id: i,
-                    productData: data[i],
+                    productData: data[index],
                 })
                 .then((res) => {
                     console.log(res.data);
@@ -163,7 +162,7 @@ function UploadExcel() {
             pauseOnHover: true,
             draggable: true,
         });
-    };;
+    };
     const convertToJson = (headers, data) => {
         const rows = [];
         data.forEach((row) => {
@@ -293,6 +292,7 @@ function UploadExcel() {
 
     return (
         <div className="upload-excel">
+            <h5>Bulk Upload Products</h5>
             <br />
             <div className="excel-input-container">
                 <input
@@ -301,7 +301,6 @@ function UploadExcel() {
                     onChange={importExcel}
                 />
             </div>
-
             {/* FIXME: TABLE VIRTUALIZATION */}
             {data != null ? (
                 <>

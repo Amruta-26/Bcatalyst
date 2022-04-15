@@ -26,7 +26,8 @@ const drawerWidth = 300;
 
 export default function Sidebar() {
     const productItems = [
-        { name: "Add Product", link: "/add-product" },
+        { name: "Bulk Add Product", link: "/add-product" },
+        { name: "Add Single Product", link: "/add-single-product" },
         { name: "Show Product", link: "/show-product" },
         { name: "Add Pincode", link: "/add-pincode" },
         { name: "Tshirt Size", link: "/tshirt-size" },
