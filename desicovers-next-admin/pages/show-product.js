@@ -43,11 +43,16 @@ export default function Home(props) {
                 <tbody>
                     {props.data.map((ninja) => (
                         <tr key={ninja._id}>
-                            <td>{ninja.id}</td>
-                            <td>{ninja.productData.name}</td>
-                            <td>{ninja.productData.description}</td>
-                            <td>{ninja.productData.price}</td>
-                            <td>{ninja.productData.category}</td>
+                            <td>{ninja._id}</td>
+                            <td>{ninja?.productData?.name || ninja.name}</td>
+                            <td>
+                                {ninja?.productData?.description ||
+                                    ninja.description}
+                            </td>
+                            <td>{ninja?.productData?.price || ninja.price}</td>
+                            <td>
+                                {ninja?.productData?.category || ninja.category}
+                            </td>
                             <td></td>
                             <td></td>
                             <td></td>

@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { toast } from "react-toastify";
 
 const AddSingleProduct = (props) => {
     const initialProductData = {
@@ -20,19 +21,48 @@ const AddSingleProduct = (props) => {
         productReview: "",
     };
     const [product, setProduct] = useState(initialProductData);
+    const [categories, setCategories] = useState([]);
     //add product
     const addProduct = () => {
+        const loa = toast.loading("inserting product");
+
         axios
-            .post("http://desicover.herokuapp.com/create-new-product", product)
+            .post("https://desicover.herokuapp.com/create-new-product", product)
             .then((res) => {
                 console.log(res);
+                // toast.success("Product Added Successfully");
+                toast.update(loa, {
+                    render: "Product added successfully",
+                    type: "success",
+                    isLoading: false,
+                    position: "top-center",
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                });
                 clearFields();
                 // props.history.push("/");
+            })
+            .catch((err) => {
+                console.log(err);
+                toast.error("Product Not Added");
             });
     };
     const clearFields = () => {
         setProduct(initialProductData);
     };
+    const fetchAllCategories = () => {
+        axios
+            .get("https://desicover.herokuapp.com/get-all-categories")
+            .then((res) => {
+                setCategories(res.data);
+            });
+    };
+
+    useEffect(() => {
+        fetchAllCategories();
+        // toast.success("Categories list refreshed");
+    }, []);
     return (
         <>
             <div>
@@ -43,11 +73,11 @@ const AddSingleProduct = (props) => {
                         type="text"
                         className="form-control"
                         placeholder="Enter Product Name"
-                        value={product.productName}
+                        value={product.name}
                         onChange={(e) =>
                             setProduct({
                                 ...product,
-                                productName: e.target.value,
+                                name: e.target.value,
                             })
                         }
                     />
@@ -65,12 +95,15 @@ const AddSingleProduct = (props) => {
                         }
                     >
                         <option value="Select Category">Select Category</option>
-                        <option value="men">Men</option>
-                        <option value="women">Women</option>
-                        <option value="children">Children</option>
+                        {categories?.data?.map((category) => (
+                            <option key={category._id} value={category.name}>
+                                {category.categoryName}
+                            </option>
+                        ))}
                     </select>
                 </div>
                 {/* the model */}
+                {/* {JSON.stringify(categories.data)} */}
                 <div className="form-group">
                     <label>Model of the Product</label>
                     <input
@@ -200,7 +233,9 @@ const AddSingleProduct = (props) => {
                 <Box display="flex">
                     <button
                         className="btn btn-submit btn-primary"
-                        onClick={() => addProduct()}
+                        onClick={(e) => {
+                            e.preventDefault(), addProduct();
+                        }}
                     >
                         Add Product
                     </button>

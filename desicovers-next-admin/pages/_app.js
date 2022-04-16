@@ -26,6 +26,8 @@ import CssBaseline from "@mui/material/CssBaseline";
 import axios from "axios";
 import Grid from "@mui/material/Grid";
 import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from "react-toastify";
+
 import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
@@ -45,6 +47,8 @@ function MyApp({ Component, pageProps }) {
             </Head>
             <Box sx={{ display: "flex" }}>
                 <CssBaseline />
+
+                <ToastContainer />
 
                 <Box
                     sx={{

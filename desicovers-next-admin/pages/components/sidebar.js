@@ -28,6 +28,7 @@ export default function Sidebar() {
     const productItems = [
         { name: "Bulk Add Product", link: "/add-product" },
         { name: "Add Single Product", link: "/add-single-product" },
+        { name: "Add Category", link: "/add-category" },
         { name: "Show Product", link: "/show-product" },
         { name: "Add Pincode", link: "/add-pincode" },
         { name: "Tshirt Size", link: "/tshirt-size" },
